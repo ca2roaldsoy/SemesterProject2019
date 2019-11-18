@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  width: 250px;
+  height: auto;
+}
+
+h2 {
+  text-align: center;
+  margin: 50px;
+}
+
+input {
+  visibility: hidden;
+}
+
+.characters {
+  float: left;
+  width: 500px;
+  height: auto;
+}
+
+.carousel {
+  float: right;
+}
+
+/*# sourceMappingURL=styles.css.map */
