@@ -1,3 +1,10 @@
+@import "variables";
+
+body {
+    
+    font-family: $fontRiseofKingdom;
+}
+
 h2 {
     
     text-align: center;
@@ -8,3 +15,4 @@ input {
     
     visibility: hidden;
 }
+

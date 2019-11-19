@@ -1,12 +1,14 @@
 .header {
     
-  display:flex;
-  justify-content: center;
+    display: block;
+    margin: 0 auto;
     
     &__logo {
         
-        width: 250px;
+        width: 50%;
         height: auto;
+        margin: 25px auto;
+        display: block;
+       
     }
-    
 }

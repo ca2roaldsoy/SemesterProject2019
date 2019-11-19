@@ -1,3 +1,16 @@
+* {
+    
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    
+    font-family: RiseofKingdom; 
+    src: url("../Fonts/vladimir-nikolic_rise-of-kingdom/Rise of Kingdom.ttf"); 
+}
+
+@import "variables";
+@import "main";
 @import "header";
 @import "blocktags";
-@import "main";
