@@ -14,3 +14,10 @@
     
     @include playBtn;
 }
+
+.outerContainer {
+    
+    border: 1px solid $orange;
+    background-color: white;
+    width: 80%;
+}

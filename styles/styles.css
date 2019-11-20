@@ -70,7 +70,7 @@
     width: 100%;
     max-width: 100%;
     margin-top: 30px;
-    color: green;
+    color: #FF4800;
   }
   .characterInfo button {
     display: none;
@@ -99,14 +99,21 @@
 }
 @media only screen and (min-width: 1200px) {
   .btn {
-    transform: translateX(600px);
+    transform: translateX(550px);
     float: right;
   }
+}
+
+.outerContainer {
+  border: 1px solid #FF980D;
+  background-color: white;
+  width: 80%;
 }
 
 .header {
   display: block;
   margin: 0 auto;
+  background-color: #FF4800;
 }
 .header__logo {
   width: 15em;
@@ -114,14 +121,24 @@
   margin: 25px auto;
   display: block;
 }
+@media only screen and (min-width: 1200px) {
+  .header__logo {
+    width: 20em;
+    height: 250px;
+  }
+}
 
 body {
   font-family: "RiseofKingdom", serif;
+  background-image: url(../Images/Background/compass-160051_640.png);
+  background-repeat: repeat;
+  background-size: 100px;
 }
 
 h2 {
   text-align: center;
   margin: 50px;
+  font-size: 42px;
 }
 
 input {
@@ -131,6 +148,8 @@ input {
 main {
   display: flex;
   align-items: flex-start;
+  background-color: white;
+  padding: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
