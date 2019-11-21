@@ -2,7 +2,7 @@
 
 .characters {
 
-   @include characters;
+    @include characters;
 }
 
 .characterInfo {
@@ -17,6 +17,6 @@
 
 .outerContainer {
     
-    background-color: rgba(255, 72, 0, 0.8);
+    background-color: rgba(255, 140, 0, 0.98);
     width: 95%;
 }

@@ -11,9 +11,8 @@
 .characters {
   width: 100%;
   height: auto;
-  font-size: 14px;
-  color: white;
-  text-shadow: 1px 1px black;
+  font-size: 18px;
+  color: #000000;
 }
 .characters__token--img {
   margin-top: 10px;
@@ -32,6 +31,7 @@
 @media only screen and (min-width: 1200px) {
   .characters {
     width: 60%;
+    font-size: 18px;
   }
 }
 
@@ -42,9 +42,10 @@
   z-index: 3;
   top: 0px;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
   transition: 0.5s;
   margin: 0 auto;
+  display: none;
 }
 .characterInfo__item {
   max-width: 400px;
@@ -76,7 +77,7 @@
 @media only screen and (min-width: 1200px) {
   .characterInfo {
     display: block;
-    background-color: #FF4800;
+    background-color: #FF980D;
     border: 1px solid #000000;
     height: 80vh;
     width: 200vw;
@@ -86,7 +87,8 @@
   .characterInfo__item {
     width: 100%;
     max-width: 90%;
-    color: white;
+    color: #000000;
+    font-size: 18px;
   }
   .characterInfo__item--img {
     width: 100%;
@@ -125,14 +127,14 @@
 }
 
 .outerContainer {
-  background-color: rgba(255, 72, 0, 0.8);
+  background-color: rgba(255, 140, 0, 0.98);
   width: 95%;
 }
 
 .header {
   display: block;
   margin: 0 auto;
-  background-color: rgba(255, 72, 0, 0.8);
+  background-color: #E82A0C;
   width: 95%;
 }
 .header__logo {
@@ -153,7 +155,7 @@ body {
   background-image: url(../Images/Background/compass-160051_640.png);
   background-size: 50px;
   background-position: center center;
-  background-color: #FF4800;
+  background-color: #E82A0C;
 }
 
 h2 {
@@ -163,16 +165,8 @@ h2 {
   border-radius: 50px;
 }
 
-input:checked {
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 10px #ffffff;
-  animation: backgrglow 1.5s linear infinite alternate;
-}
-@keyframes backgrglow {
-  to {
-    box-shadow: 0px 0px 20px 20px #ffffff;
-  }
+input {
+  visibility: hidden;
 }
 
 main {

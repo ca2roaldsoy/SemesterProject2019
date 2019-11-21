@@ -7,9 +7,10 @@
     z-index: 3;
     top: 0px;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     transition: 0.5s;
     margin: 0 auto;
+    display: none;
 
     &__item {
 
@@ -48,7 +49,7 @@
     @media only screen and (min-width: 1200px) {
      
         display: block;
-        background-color: $orangeRed;
+        background-color: $orange;
         border: 1px solid $black;
         height: 80vh;
         width: 200vw;
@@ -60,7 +61,8 @@
 
                 width: 100%;
                 max-width: 90%;
-                color: white;
+                color: $black;
+                font-size: 18px;
                 
                 &--img {
                     
@@ -82,9 +84,8 @@
     
     width: 100%;
     height: auto;
-    font-size: 14px;
-    color: white;
-    text-shadow: 1px 1px black;
+    font-size: 18px;
+    color: $black;
         
     &__token--img {
             
@@ -111,6 +112,7 @@
     @media only screen and (min-width: 1200px) {
         
         width: 60%;
+        font-size: 18px;
     }
 }
 
