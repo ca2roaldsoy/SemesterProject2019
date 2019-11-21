@@ -3,12 +3,18 @@
 body {
     
     font-family: $fontRiseofKingdom;
+    background-image: url(../Images/Background/compass-160051_640.png);
+    background-size: 50px;
+    background-position: center center;
+    background-color: $orangeRed;
 }
 
 h2 {
     
     text-align: center;
-    margin: 50px;
+    font-size: 42px;
+    background-color: $orange;
+    border-radius: 50px;
 }
 
 input {
@@ -16,3 +22,9 @@ input {
     visibility: hidden;
 }
 
+main {
+ 
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+}

@@ -1,14 +1,24 @@
+@import "variables";
+
 .header {
     
     display: block;
     margin: 0 auto;
+    background-color: $orangeRed;
+    width: 95%;
     
     &__logo {
         
-        width: 50%;
+        width: 15em;
         height: auto;
         margin: 25px auto;
         display: block;
+        
+        @media only screen and (min-width: 1200px) {
+            
+            width: 20em;
+            height: 250px;
+        } 
        
     }
 }

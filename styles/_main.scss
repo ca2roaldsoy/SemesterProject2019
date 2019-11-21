@@ -1,25 +1,22 @@
+@import "mixins";
+
 .characters {
 
-    width: 100%;
-    height: auto;
-        
-    &__token--img {
-            
-        padding-top: 10px;
-    }
+   @include characters;
 }
-
-
-
 
 .characterInfo {
     
-    width: 100%;
+    @include characterInfo;
+}
+
+.btn {
     
-    &__img {
-        
-        padding-top: 20px;
-        width: 250px;
-        
-    }
+    @include playBtn;
+}
+
+.outerContainer {
+    
+    background-color: rgba(255, 72, 0, 0.8);
+    width: 95%;
 }

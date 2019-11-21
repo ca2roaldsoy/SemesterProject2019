@@ -1,0 +1,139 @@
+// Character Info
+@mixin characterInfo {
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.5s;
+    margin: 0 auto;
+    display: none;
+   
+
+    &__item {
+
+        max-width: 400px;
+        margin-top: 30px;
+        color: white;
+        margin: 0 auto;
+        position: relative;
+        top: 25%;
+        width: 100%;
+
+        &--img {
+
+            padding-top: 50px;
+            width: 250px;
+
+        }
+        
+    button {
+            
+        display: block;
+        background-image: none;
+        padding-top: 10px;
+        margin-top: 50px;
+        width: 40%;
+        font-size: 4.5vw;
+        
+            @media only screen and (min-width: 768px) {
+     
+                font-size: 24px;
+                width: 30%;
+                transform: translateY(70px);
+        
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1200px) {
+     
+        display: block;
+        position: inherit;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 80vh;
+        width: 200vw;
+        margin-top: 20px;
+        text-align: center;
+        position: sticky;
+        
+        
+            &__item {
+
+                width: 100%;
+                max-width: 90%;
+                color: $black;
+                
+                &--img {
+                    
+                    width: 20vw;
+                }
+            }
+        
+            
+        
+        button {
+            
+            display: none;
+        }
+    }
+    
+}
+
+// Character
+@mixin characters {
+    
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    color: white;
+    text-shadow: 1px 1px black;
+        
+    &__token--img {
+            
+        padding-top: 10px;
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        
+        width: 60%;
+    }
+}
+
+// Play Game Button
+@mixin playBtn {
+    
+    background-image: url(../Images/Icons/arrow_icon.png);
+    background-repeat: no-repeat;
+    background-size: 125px;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-position: 40px 20px;
+    padding-top: 50px;
+    margin: 20px auto;
+    font-size: 18px;
+    border: none;
+    color: aqua;
+    width: 200px;
+    display: block;
+    
+    @media only screen and (min-width: 768px) {
+     
+        font-size: 38px;
+        width: 250px;
+        
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        
+        transform: translateX(480px);
+        background-position: 45px 20px;
+        float: left;
+        position: fixed;
+        bottom: 0;
+        width: 250px;
+        z-index: 2;
+    }
+}
