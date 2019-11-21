@@ -11,6 +11,9 @@
 .characters {
   width: 100%;
   height: auto;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px black;
 }
 .characters__token--img {
   padding-top: 10px;
@@ -26,19 +29,24 @@
   height: 100vh;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 0px;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   transition: 0.5s;
+  margin: 0 auto;
+  display: none;
 }
 .characterInfo__item {
-  width: 100%;
   max-width: 400px;
   margin-top: 30px;
-  color: green;
+  color: white;
   margin: 0 auto;
+  position: relative;
+  top: 25%;
+  width: 100%;
 }
 .characterInfo__item--img {
-  padding-top: 20px;
+  padding-top: 50px;
   width: 250px;
 }
 .characterInfo__item button {
@@ -60,17 +68,20 @@
   .characterInfo {
     display: block;
     position: inherit;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 80vh;
+    width: 200vw;
     margin-top: 20px;
     text-align: center;
     position: sticky;
   }
   .characterInfo__item {
     width: 100%;
-    max-width: 100%;
-    margin-top: 30px;
-    color: #FF4800;
+    max-width: 90%;
+    color: #000000;
+  }
+  .characterInfo__item--img {
+    width: 20vw;
   }
   .characterInfo button {
     display: none;
@@ -80,40 +91,45 @@
 .btn {
   background-image: url(../Images/Icons/arrow_icon.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
-  padding-top: 80px;
-  margin: 0px auto;
-  display: block;
-  width: 50%;
-  font-size: 6vw;
+  background-size: 125px;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-position: 40px 20px;
+  padding-top: 50px;
+  margin: 20px auto;
+  font-size: 18px;
   border: none;
   color: aqua;
+  width: 200px;
+  display: block;
 }
 @media only screen and (min-width: 768px) {
   .btn {
     font-size: 38px;
-    width: 40%;
-    transform: translateY(70px);
+    width: 250px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .btn {
-    transform: translateX(550px);
-    float: right;
+    transform: translateX(480px);
+    background-position: 45px 20px;
+    float: left;
+    position: fixed;
+    bottom: 0;
+    width: 250px;
+    z-index: 2;
   }
 }
 
 .outerContainer {
-  border: 1px solid #FF980D;
-  background-color: white;
-  width: 80%;
+  background-color: rgba(255, 72, 0, 0.8);
+  width: 95%;
 }
 
 .header {
   display: block;
   margin: 0 auto;
   background-color: #FF4800;
+  width: 95%;
 }
 .header__logo {
   width: 15em;
@@ -131,14 +147,16 @@
 body {
   font-family: "RiseofKingdom", serif;
   background-image: url(../Images/Background/compass-160051_640.png);
-  background-repeat: repeat;
-  background-size: 100px;
+  background-size: 50px;
+  background-position: center center;
+  background-color: #FF4800;
 }
 
 h2 {
   text-align: center;
-  margin: 50px;
   font-size: 42px;
+  background-color: #FF980D;
+  border-radius: 50px;
 }
 
 input {
@@ -148,7 +166,6 @@ input {
 main {
   display: flex;
   align-items: flex-start;
-  background-color: white;
   padding: 50px;
 }
 
