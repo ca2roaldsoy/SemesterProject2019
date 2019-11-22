@@ -15,6 +15,8 @@
   color: #000000;
 }
 .characters__token--img {
+  width: 90%;
+  margin: 0 auto;
   margin-top: 10px;
 }
 .characters__token--img:hover {
@@ -32,6 +34,10 @@
   .characters {
     width: 60%;
     font-size: 18px;
+    margin-left: 70px;
+  }
+  .characters__token--img {
+    width: 100%;
   }
 }
 
@@ -77,12 +83,17 @@
 @media only screen and (min-width: 1200px) {
   .characterInfo {
     display: block;
-    background-color: #FF980D;
+    background-image: url(../Images/Background/scroll-1033117_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border: 1px solid #000000;
-    height: 80vh;
-    width: 200vw;
-    margin-top: 20px;
-    position: sticky;
+    height: 70vh;
+    width: 20vw;
+    left: 70%;
+    top: 70%;
+    position: absolute;
+    text-align: center;
   }
   .characterInfo__item {
     width: 100%;
@@ -120,28 +131,44 @@
 }
 @media only screen and (min-width: 1200px) {
   .btnPlay {
-    width: 250px;
-    left: 68%;
+    outline: 1px solid;
+    outline-offset: 5px;
+    height: 100px;
+    font-size: 32px;
     z-index: 4;
+    position: relative;
+    left: 85%;
+    bottom: 15%;
+    background-image: url(../Images/Icons/arrow_icon.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 
 .outerContainer {
-  background-color: rgba(255, 140, 0, 0.98);
-  width: 95%;
+  width: 100%;
 }
 
 .header {
   display: block;
   margin: 0 auto;
-  background-color: #E82A0C;
-  width: 95%;
+  width: 80%;
+  border-bottom: 5px dashed gray;
 }
 .header__logo {
-  width: 15em;
+  width: 45vw;
   height: auto;
-  margin: 25px auto;
+  margin: 50px auto;
+  margin-top: 10vh;
   display: block;
+}
+@media only screen and (min-width: 768px) {
+  .header__logo {
+    width: 20em;
+    height: 250px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .header__logo {
@@ -152,17 +179,30 @@
 
 body {
   font-family: "RiseofKingdom", serif;
-  background-image: url(../Images/Background/compass-160051_640.png);
-  background-size: 50px;
+  background-image: url(../Images/Background/scrollpaper.png);
+  background-repeat: no-repeat;
   background-position: center center;
-  background-color: #E82A0C;
+  background-size: 140% 120%;
+  background-color: #AD6B00;
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    background-image: url(../Images/Background/scroll-3069306_1280.png);
+    background-size: 115% 160%;
+  }
 }
 
 h2 {
   text-align: center;
   font-size: 42px;
-  background-color: #FF980D;
   border-radius: 50px;
+  border: 1px solid;
+  width: 90%;
+  max-width: 450px;
+  margin: 20px auto;
+  background-color: #C4450A;
+  color: white;
+  padding: 10px;
 }
 
 input {

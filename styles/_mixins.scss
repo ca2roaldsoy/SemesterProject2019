@@ -49,13 +49,17 @@
     @media only screen and (min-width: 1200px) {
      
         display: block;
-        background-color: $orange;
+        background-image: url(../Images/Background/scroll-1033117_1920.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         border: 1px solid $black;
-        height: 80vh;
-        width: 200vw;
-        margin-top: 20px;
-        position: sticky;
-        
+        height: 70vh;
+        width: 20vw;
+        left: 70%;
+        top: 70%;
+        position: absolute;
+        text-align: center;
         
             &__item {
 
@@ -89,6 +93,8 @@
         
     &__token--img {
             
+        width: 90%;
+        margin: 0 auto;
         margin-top: 10px;
         
         &:hover {
@@ -113,6 +119,12 @@
         
         width: 60%;
         font-size: 18px;
+        margin-left: 70px;
+        
+        &__token--img {
+            
+            width: 100%;
+        }
     }
 }
 
@@ -140,8 +152,18 @@
     
     @media only screen and (min-width: 1200px) {
         
-        width: 250px;
-        left: 68%;
+        outline: 1px solid;
+        outline-offset: 5px;
+        height: 100px;
+        font-size: 32px;
         z-index: 4;
+        position: relative;
+        left: 85%;
+        bottom: 15%;
+        background-image: url(../Images/Icons/arrow_icon.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: rgba(0,0,0,0);
     }
 }
