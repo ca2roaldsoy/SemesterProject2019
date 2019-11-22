@@ -4,15 +4,23 @@
     
     display: block;
     margin: 0 auto;
-    background-color: $orangeRed;
-    width: 95%;
+    width: 80%;
+    border-bottom: 5px dashed gray;
     
     &__logo {
         
-        width: 15em;
+        width: 45vw;
         height: auto;
-        margin: 25px auto;
+        margin: 50px auto;
+        margin-top: 10vh;
         display: block;
+        
+        @media only screen and (min-width: 768px) {
+            
+            width: 20em;
+            height: 250px;
+            
+        }
         
         @media only screen and (min-width: 1200px) {
             

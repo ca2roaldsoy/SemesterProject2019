@@ -2,7 +2,7 @@
 
 .characters {
 
-   @include characters;
+    @include characters;
 }
 
 .characterInfo {
@@ -10,13 +10,12 @@
     @include characterInfo;
 }
 
-.btn {
+.btnPlay {
     
     @include playBtn;
 }
 
 .outerContainer {
     
-    background-color: rgba(255, 72, 0, 0.8);
-    width: 95%;
+    width: 100%;
 }
