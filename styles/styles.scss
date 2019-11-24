@@ -1,3 +1,4 @@
+/* RESET */
 * {
     
     padding: 0;
@@ -11,8 +12,10 @@
     src: url("../Fonts/vladimir-nikolic_rise-of-kingdom/Rise of Kingdom.ttf"); 
 }
 
+@import "blocktags";
 @import "mixins";
 @import "variables";
 @import "main";
 @import "header";
-@import "blocktags";
+
+@include media;

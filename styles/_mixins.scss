@@ -1,169 +1,127 @@
-// Character Info
-@mixin characterInfo {
+@import "variables"; 
+        
+// Media Queries
 
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 3;
-    top: 0px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    transition: 0.5s;
-    margin: 0 auto;
-    display: none;
+@mixin media {
 
-    &__item {
+    /******************** Screen 768 px ******************/
+    
+    @media only screen and (min-width: 768px) { 
 
-        max-width: 400px;
-        margin-top: 0px;
-        color: white;
-        margin: 0 auto;
-        position: relative;
-        top: 10%;
-        width: 100%;
+        .characterInfo {
 
-        &--img {
-
-            width: 250px;
+            font-size: 24px;
+            width: 30%;
         }
-        
-    button {
-            
-        display: block;
-        padding-top: 10px;
-        margin-top: 50px;
-        width: 40%;
-        font-size: 4.5vw;
-        margin: 50px auto;
-        
-            @media only screen and (min-width: 768px) {
-     
-                font-size: 24px;
-                width: 30%;
-                transform: translateY(70px);
-        
+
+        .characters {
+
+            &__token--img {
+
+                width: 70%;
             }
         }
-    }
-    
-    @media only screen and (min-width: 1200px) {
-     
-        display: block;
-        background-image: url(../Images/Background/scroll-1033117_1920.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        border: 1px solid $black;
-        height: 70vh;
-        width: 20vw;
-        left: 70%;
-        top: 70%;
-        position: absolute;
-        text-align: center;
+
+        .btnPlay {
+
+            font-size: 24px;
+            height: auto;
+            max-width: 200px;
+            right: 0;
+
+        }
         
+        .header__logo {
+            
+            width: 20em;
+            height: 250px;
+        }
+    }
+
+     /******************** Screen 1200 px ****************/
+    
+    @media only screen and (min-width: 1200px) { 
+
+        .characterInfo {
+
+            display: block;
+            background-image: url(../Images/Background/scroll-1033117_1920.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 1px solid $black;
+            height: 35vw;
+            width: 20vw;
+            left: 70%;
+            top: 70%;
+            position: absolute;
+            text-align: center;
+
             &__item {
 
                 width: 100%;
                 max-width: 90%;
                 color: $black;
                 font-size: 18px;
-                
+
                 &--img {
-                    
+
                     width: 100%;
                     height: auto;
                 }
             }
 
-        button {
-            
-            display: none;
-        }
-    }
-    
-}
+            button {
 
-// Character
-@mixin characters {
-    
-    width: 100%;
-    height: auto;
-    font-size: 18px;
-    color: $black;
-        
-    &__token--img {
-            
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 10px;
-        
-        &:hover {
-            
-            cursor: pointer;
-            border-radius: 50%;
-            box-shadow: 0px 0px 10px 10px $white;
-            animation: backgrglow 1.5s linear infinite alternate;
-            
-            @keyframes backgrglow {
-                
-                to {
-                    
-                    box-shadow: 0px 0px 20px 20px $white;
-                }
+                display: none;
             }
-            
         }
-    }
-    
-    @media only screen and (min-width: 1200px) {
-        
-        width: 60%;
-        font-size: 18px;
-        margin-left: 70px;
-        
-        &__token--img {
-            
-            width: 100%;
-        }
-    }
-}
 
-// Play Game Button
-@mixin playBtn {
-    
-    position: fixed;
-    bottom: 0;
-    left: 25%;
-    z-index: 2;
-    margin: 0 auto;
-    display: block;
-    width: 50%;
-    height: 30px;
-    border-radius: 5px 5px 0 0;
-    
-    @media only screen and (min-width: 768px) {
-     
-        font-size: 24px;
-        height: auto;
-        max-width: 200px;
-        right: 0;
+        .characters {
+
+            width: 60%;
+            font-size: 18px;
+            margin-left: 70px;
+
+            &__token--img {
+
+                width: 100%;
+            }
+        }
+
+        .btnPlay {
+
+            height: 12vh;
+            font-size: 32px;
+            z-index: 4;
+            position: relative;
+            left: 85%;
+            background-image: url(../Images/Icons/arrow_icon.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: rgba(0,0,0,0);
+
+             &:hover {
+
+                background-color: rgba(0,0,0,0);
+            }
+        }
         
-    }
-    
-    @media only screen and (min-width: 1200px) {
+        .header__logo {
+            
+            width: 20em;
+            height: 250px;
+        }
         
-        outline: 1px solid;
-        outline-offset: 5px;
-        height: 100px;
-        font-size: 32px;
-        z-index: 4;
-        position: relative;
-        left: 85%;
-        bottom: 15%;
-        background-image: url(../Images/Icons/arrow_icon.png);
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-color: rgba(0,0,0,0);
+        body {
+            
+            background-image: 
+                url(../Images/Background/scroll-3069306_1280.png), url(../Images/Background/TexturesCom_WoodReinforced0084_2_seamless_S.jpg);
+            
+            background-size: 
+                115% 160%,
+                200px;
+        }
     }
 }
