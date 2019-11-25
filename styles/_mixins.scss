@@ -45,12 +45,13 @@
         .characterInfo {
 
             display: block;
-            background-image: url(../Images/Background/scroll-1033117_1920.jpg);
+            background-image: url(../Images/Background/info_paper.jpg);
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             border: 1px solid $black;
-            height: 35vw;
+            border-radius: 5px;
+            height: 40vw;
             width: 20vw;
             left: 70%;
             top: 70%;
@@ -116,12 +117,13 @@
         
         body {
             
-            background-image: 
-                url(../Images/Background/scroll-3069306_1280.png), url(../Images/Background/TexturesCom_WoodReinforced0084_2_seamless_S.jpg);
+           background-image: 
+                url(../Images/Background/scroll_v.png),
+                url(../Images/Background/backGr_lg.jpg);
             
             background-size: 
                 115% 160%,
-                200px;
+                300px;
         }
     }
 }
