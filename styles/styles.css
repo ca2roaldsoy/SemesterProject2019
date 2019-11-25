@@ -9,7 +9,7 @@
   font-family: RiseofKingdom;
   src: url("../Fonts/vladimir-nikolic_rise-of-kingdom/Rise of Kingdom.ttf");
 }
-body {
+#select_character {
   font-family: "RiseofKingdom", serif;
   background-image: url(../Images/Background/scroll_h.png), url(../Images/Background/backGr_sm.jpg);
   background-repeat: no-repeat, repeat;
@@ -122,6 +122,14 @@ main {
   width: 100%;
 }
 
+/************ Canvas ***************/
+#canvas {
+  background-image: url(../Images/Background/compass-160051_640.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .header {
   display: block;
   margin: 0 auto;
@@ -220,7 +228,7 @@ main {
     height: 250px;
   }
 
-  body {
+  #select_character {
     background-image: url(../Images/Background/scroll_v.png), url(../Images/Background/backGr_lg.jpg);
     background-size: 115% 160%, 300px;
   }
