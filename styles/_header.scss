@@ -1,0 +1,19 @@
+@import "variables";
+
+.header {
+    
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-bottom: 5px dashed gray;
+    
+    &__logo {
+        
+        width: 45vw;
+        height: auto;
+        margin: 50px auto;
+        margin-top: 10vh;
+        display: block;
+       
+    }
+}

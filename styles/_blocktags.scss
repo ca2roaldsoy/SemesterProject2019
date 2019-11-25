@@ -1,0 +1,47 @@
+@import "variables";
+@import "mixins";
+
+body {
+    
+    font-family: $fontRiseofKingdom;
+    
+     background-image: 
+        url(../Images/Background/scroll_h.png), 
+        url(../Images/Background/backGr_sm.jpg);
+    
+    background-repeat: 
+        no-repeat, 
+        repeat;
+    
+    background-position: 
+        center center, 
+        center;
+    
+    background-size: 140% 120%, 200px;
+}
+
+h2 {
+    
+    text-align: center;
+    font-size: 42px;
+    border-radius: 50px;
+    border: 1px solid;
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    background-color: $orange;
+    color: white;
+    padding: 10px;
+}
+
+input {
+
+    visibility: hidden;
+}
+
+main {
+ 
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+}

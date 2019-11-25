@@ -1,0 +1,229 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: RiseofKingdom;
+  src: url("../Fonts/vladimir-nikolic_rise-of-kingdom/Rise of Kingdom.ttf");
+}
+body {
+  font-family: "RiseofKingdom", serif;
+  background-image: url(../Images/Background/scroll_h.png), url(../Images/Background/backGr_sm.jpg);
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center;
+  background-size: 140% 120%, 200px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 42px;
+  border-radius: 50px;
+  border: 1px solid;
+  width: 90%;
+  max-width: 450px;
+  margin: 20px auto;
+  background-color: #C4450A;
+  color: white;
+  padding: 10px;
+}
+
+input {
+  visibility: hidden;
+}
+
+main {
+  display: flex;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+/************ Character Tokens ***************/
+.characters {
+  width: 100%;
+  height: auto;
+  font-size: 18px;
+  color: #000000;
+}
+.characters__token--img {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.characters__token--img:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 10px #ffffff;
+  animation: backgrglow 1.5s linear infinite alternate;
+}
+@keyframes backgrglow {
+  to {
+    box-shadow: 0px 0px 20px 20px #ffffff;
+  }
+}
+
+/************ Character Tokens Info ***************/
+.characterInfo {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  top: 0px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  transition: 0.5s;
+  margin: 0 auto;
+  display: none;
+}
+.characterInfo__item {
+  max-width: 400px;
+  margin-top: 0px;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  top: 10%;
+  width: 100%;
+}
+.characterInfo__item--img {
+  width: 250px;
+}
+.characterInfo button {
+  display: block;
+  padding-top: 10px;
+  margin-top: 50px;
+  width: 40%;
+  font-size: 4.5vw;
+  margin: 50px auto;
+}
+
+/************ Play Button ***************/
+.btnPlay {
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  z-index: 2;
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+  background-color: #C4450A;
+  color: #ffffff;
+}
+.btnPlay:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #C4450A;
+}
+
+.outerContainer {
+  width: 100%;
+}
+
+.header {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border-bottom: 5px dashed gray;
+}
+.header__logo {
+  width: 45vw;
+  height: auto;
+  margin: 50px auto;
+  margin-top: 10vh;
+  display: block;
+}
+
+/******************** Screen 768 px ******************/
+@media only screen and (min-width: 768px) {
+  .characterInfo {
+    font-size: 24px;
+    width: 30%;
+  }
+
+  .characters__token--img {
+    width: 70%;
+  }
+
+  .btnPlay {
+    font-size: 24px;
+    height: auto;
+    max-width: 200px;
+    right: 0;
+  }
+
+  .header__logo {
+    width: 20em;
+    height: 250px;
+  }
+}
+/******************** Screen 1200 px ****************/
+@media only screen and (min-width: 1200px) {
+  .characterInfo {
+    display: block;
+    background-image: url(../Images/Background/info_paper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    height: 40vw;
+    width: 20vw;
+    left: 70%;
+    top: 70%;
+    position: absolute;
+    text-align: center;
+  }
+  .characterInfo__item {
+    width: 100%;
+    max-width: 90%;
+    color: #000000;
+    font-size: 18px;
+  }
+  .characterInfo__item--img {
+    width: 100%;
+    height: auto;
+  }
+  .characterInfo button {
+    display: none;
+  }
+
+  .characters {
+    width: 60%;
+    font-size: 18px;
+    margin-left: 70px;
+  }
+  .characters__token--img {
+    width: 100%;
+  }
+
+  .btnPlay {
+    height: 12vh;
+    font-size: 32px;
+    z-index: 4;
+    position: relative;
+    left: 85%;
+    background-image: url(../Images/Icons/arrow_icon.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .btnPlay:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .header__logo {
+    width: 20em;
+    height: 250px;
+  }
+
+  body {
+    background-image: url(../Images/Background/scroll_v.png), url(../Images/Background/backGr_lg.jpg);
+    background-size: 115% 160%, 300px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
