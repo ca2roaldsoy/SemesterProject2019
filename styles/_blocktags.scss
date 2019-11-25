@@ -1,19 +1,23 @@
 @import "variables";
+@import "mixins";
 
 body {
     
     font-family: $fontRiseofKingdom;
-    background-image: url(../Images/Background/scrollpaper.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 140% 120%;
-    background-color: $brown;
     
-    @media only screen and (min-width: 1200px) {
-
-        background-image: url(../Images/Background/scroll-3069306_1280.png);
-        background-size: 115% 160%;
-    }
+     background-image: 
+        url(../Images/Background/scroll_h.png), 
+        url(../Images/Background/backGr_sm.jpg);
+    
+    background-repeat: 
+        no-repeat, 
+        repeat;
+    
+    background-position: 
+        center center, 
+        center;
+    
+    background-size: 140% 120%, 200px;
 }
 
 h2 {

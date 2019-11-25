@@ -1,18 +1,99 @@
 @import "mixins";
 
+/************ Character Tokens ***************/
 .characters {
 
-    @include characters;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    color: $black;
+        
+    &__token--img {
+            
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+        
+        &:hover {
+            
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 10px $white;
+            animation: backgrglow 1.5s linear infinite alternate;
+            
+            @keyframes backgrglow {
+                
+                to {
+                    
+                    box-shadow: 0px 0px 20px 20px $white;
+                }
+            }   
+        }
+    }
 }
 
+/************ Character Tokens Info ***************/
 .characterInfo {
     
-    @include characterInfo;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    transition: 0.5s;
+    margin: 0 auto;
+    display: none;
+
+    &__item {
+
+        max-width: 400px;
+        margin-top: 0px;
+        color: white;
+        margin: 0 auto;
+        position: relative;
+        top: 10%;
+        width: 100%;
+
+        &--img {
+
+            width: 250px;
+        }
+    }
+        
+    button {
+            
+        display: block;
+        padding-top: 10px;
+        margin-top: 50px;
+        width: 40%;
+        font-size: 4.5vw;
+        margin: 50px auto;
+    }
 }
 
+/************ Play Button ***************/
 .btnPlay {
     
-    @include playBtn;
+   position: fixed;
+    bottom: 0;
+    left: 25%;
+    z-index: 2;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px 5px 0 0;
+    background-color: $orange;
+    color: $white;
+    
+    &:hover {
+        
+        cursor: pointer;
+        background-color: $white;
+        color: $orange;
+    }
 }
 
 .outerContainer {
