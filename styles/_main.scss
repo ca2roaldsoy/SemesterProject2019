@@ -104,9 +104,12 @@
 /************ Canvas ***************/
 #canvas {
     
-    background-image: url(../Images/Background/compass-160051_640.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-image: 
+        url(../Images/Background/compass-160051_640.png), 
+        url(../Images/Background/paper-68833_1280.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: 35%, cover;
+    overflow: scroll;
 }
 
