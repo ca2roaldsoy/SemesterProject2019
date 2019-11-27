@@ -1,3 +1,18 @@
+function sigils () {
+    
+    var images = [
+        
+        "Images/GameMap/house_arryn.png",
+        "Images/GameMap/house_baratheon.png",
+        "Images/GameMap/house_bolton.png"
+    ]
+    
+    
+    
+}
+
+
+
 function init () {
     
     var canvas = document.getElementById("canvas");
@@ -6,32 +21,50 @@ function init () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    var x = 0;
-    var y = canvas.height / 2;
-
-    var date = new Date();
-
+    var x = canvas.width;
+    var y = canvas.height;
     
-    function draw (x) {
+    /*var images = [
         
-        ctx.font = "48px Verdana";
-        ctx.strokeStyle = "#52ce90";
-        ctx.strokeText(date, x, y);
-        ctx.stroke();
+        "Images/GameMap/house_arryn.png",
+        "Images/GameMap/house_baratheon.png",
+        "Images/GameMap/house_bolton.png"
+    ];
+    
+   
+    var img = [];
+    var imgCount = 0;
+    
+    function allLoaded() {
         
+        for(var j=0; j < img.length; j++)
+        ctx.drawImage(img[j], x/2-70, y/7*j, 100, 100);
     }
     
-    function animate () {
+    for(var i=0; i < images.length; i++) {
+                  
+        var sigil = new Image();
+        sigil.src = images[i];
+        sigil.onload = () => {
+            
+            imgCount += 1;
+            
+            if(imgCount === images.length) {
+                
+                allLoaded()
+            }
+        }
         
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        draw(x%canvas.width);
-        x++;
-    }
-    
-    var interval = setInterval(animate, 5)
-        
+        img.push(sigil);
+    };*/
 }
-
+    /*function animate () {
+        
+        //ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    var interval = setInterval(animate, 5)*/
+       
 // check if browser supports html canvas
 if (canvas.getContext) {
     
