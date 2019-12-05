@@ -93,7 +93,7 @@ function boardGame () {
 var tiles = 31;
 var board = document.getElementById("board");
 var centerW = window.innerWidth / 2-30 + "px";
-var centerH = window.innerHeight / 2-130 + "px";
+var centerH = window.innerHeight / 2-115 + "px";
 var d = 180;
 var r = "rotate(" + d + "deg)";
 
