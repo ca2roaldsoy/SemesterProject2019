@@ -9,24 +9,18 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Game of Thrones Board Game</title>
 </head>
-<body>
+<body id="gameBoard">
 
-<button id="diceRoll" style="top: 50px; left: 20px">Roll Dice</button>
+<div class="players">
+<h1 class="player1">Player 1</h1>
+<h1 class="player2">Player 2</h1>
+</div>
 
 <div id="dice">
     <img class="dice__eyes" id="diceNr" src="Images/Dice/1x/Dice1.png" alt="dice nr1">
+    <button id="diceRoll" style="top: 50px; left: 20px">Roll Dice</button>
 </div>
 
-<div id="board"></div>
-     
-    <section id="game">
-       <img src="Images/GameMap/house_arryn.png" alt="sigil of the Arryn house" style="display: none">
-       <img src="Images/GameMap/house_baratheon.png" alt="sigil of the Baratheon house" style="display: none">
-       <img src="Images/GameMap/house_bolton.png" alt="sigil of the Bolton house" style="display: none">
-       <img src="Images/GameMap/house_greyjoy.png" alt="sigil of the Greyjoy house" style="display: none">
-       <img src="Images/GameMap/house_lannister.png" alt="sigil of the Lannister house" style="display: none">
-    </section>    
-    
-<script src="typescript.js"></script>
+<script src="board.js"></script>
 </body>
 </html>
