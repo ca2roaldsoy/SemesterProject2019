@@ -1,4 +1,4 @@
-function dice () {
+/*function dice () {
 
 var diceRoll = document.getElementById("diceRoll");
 var dice = document.querySelector("#dice");
@@ -84,4 +84,28 @@ diceRoll.addEventListener("click", function(){
     
 };
 
-dice();
+dice();*/
+
+function boardTiles () {
+    
+    var tiles = 30;
+    var board = document.getElementById("board");
+    
+    for(var i=0; i < tiles.length; i++) {
+        
+        console.log(tiles[i]);
+        var tile = document.createElement("tile");
+        var radius = 360 * i / tiles;
+        //var rotate = "translate(200px, 200px) rotate(" + rotate  + "deg) translate(0px, -180px)";
+        
+        //tile.setAttribute("class", "box");
+        //tile.setAttribute("style", "webkit-transform");
+        
+        var txtNode = document.createTextNode(i);
+        tile.appendChild(txtNode);
+        
+        document.body.appendChild("tile");
+    }
+};
+
+boardTiles();
