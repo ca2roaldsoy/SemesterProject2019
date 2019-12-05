@@ -101,15 +101,81 @@
     width: 100%;
 }
 
-/************ Canvas ***************/
-#canvas {
+/************ Game Board ***************/
+#gameBoard {
     
-    background-image: 
-        url(../Images/Background/compass-160051_640.png), 
+   background-image: 
+        url(../Images/Background/compass.png), 
         url(../Images/Background/paper-68833_1280.jpg);
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
-    background-size: 35%, cover;
-    overflow: scroll;
+    background-size: 30%, cover;
+    background-attachment: fixed;
+    @include gameBoard();
+    
 }
 
+.box {
+    
+    font-size: 100%;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/************ Dice ***************/
+#dice {
+
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    top: 450px;
+    left: 165px;
+    font-family: $fontRiseofKingdom;
+    
+}
+
+#dice img {
+    
+    width: 20%;
+    height: auto;
+}
+
+#dice #diceRoll {
+    position: absolute;
+    transform: translate(-35%, -225%);
+    background-color: $orange;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    
+}
+
+/************ Players ***************/
+
+.players {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.player1 {
+    
+    position: absolute;
+    left: 300px;
+    top: 50px;
+}
+
+.player2 {
+    
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}

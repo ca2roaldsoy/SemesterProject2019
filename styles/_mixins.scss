@@ -1,4 +1,77 @@
 @import "variables"; 
+
+
+@mixin gameBoard () {
+    
+    .box {
+        
+        background-image: url(../Images/Background/tile_backgr.jpg);
+        font-family: $fontRiseofKingdom;
+        font-weight: 400;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #tile0 {
+        
+        background-color: $green;
+        color: $white;
+        background-image: url('../Images/Icons/arrow_icon.png');
+        background-size: contain;
+        background-position: center;
+        padding-top: 10px;
+        
+    } 
+    
+    #tile15 {
+        
+        background: none;
+        color: $white;
+        padding-top: 10px;
+        background-color: $green;
+    }
+    
+    #tile11, #tile29 {
+        
+        background: none;
+        background-color: $red;
+        color: $white;
+    }
+
+    #tile5 {
+    
+        background-image: $baratheon;
+    }
+    
+    #tile7 {
+        
+        background-image: $greyjoy;
+    }
+    
+    #tile20 {
+        
+        background-image: $lannister;
+    }
+    
+     #tile25 {
+        
+        background-image: $stark;
+    }
+    
+     #tile28 {
+        
+        background-image: $targaryen;
+    }
+    
+    #tile30 {
+        
+        background-image: $crown;
+        background-size: 70px 50px;
+        background-color: $black;
+            
+    }
+}
         
 // Media Queries
 
