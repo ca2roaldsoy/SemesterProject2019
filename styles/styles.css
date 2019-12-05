@@ -247,4 +247,94 @@ main {
   display: block;
 }
 
+/******************** Screen 768 px ******************/
+@media only screen and (min-width: 768px) {
+  .characterInfo {
+    font-size: 24px;
+    width: 30%;
+  }
+
+  .characters__token--img {
+    width: 70%;
+  }
+
+  .btnPlay {
+    font-size: 24px;
+    height: auto;
+    max-width: 200px;
+    right: 0;
+  }
+
+  .header__logo {
+    width: 20em;
+    height: 250px;
+  }
+}
+/******************** Screen 1200 px ****************/
+@media only screen and (min-width: 1200px) {
+  .characterInfo {
+    display: block;
+    background-image: url(../Images/Background/info_paper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    height: 40vw;
+    width: 20vw;
+    left: 70%;
+    top: 70%;
+    position: absolute;
+    text-align: center;
+  }
+  .characterInfo__item {
+    width: 100%;
+    max-width: 90%;
+    color: #000000;
+    font-size: 18px;
+  }
+  .characterInfo__item--img {
+    width: 100%;
+    height: auto;
+  }
+  .characterInfo button {
+    display: none;
+  }
+
+  .characters {
+    width: 60%;
+    font-size: 18px;
+    margin-left: 70px;
+  }
+  .characters__token--img {
+    width: 100%;
+  }
+
+  .btnPlay {
+    height: 12vh;
+    font-size: 32px;
+    z-index: 4;
+    position: relative;
+    left: 85%;
+    background-image: url(../Images/Icons/arrow_icon.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .btnPlay:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .header__logo {
+    width: 20em;
+    height: 250px;
+  }
+
+  #select_character {
+    background-image: url(../Images/Background/scroll_v.png), url(../Images/Background/backGr_lg.jpg);
+    background-size: 115% 160%, 300px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
