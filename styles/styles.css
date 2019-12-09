@@ -30,10 +30,6 @@ h2 {
   padding: 10px;
 }
 
-input {
-  visibility: hidden;
-}
-
 main {
   display: flex;
   align-items: flex-start;
@@ -64,6 +60,28 @@ main {
   }
 }
 
+.characters__container {
+  margin-top: 50px;
+}
+
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio]:checked + .glow {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 10px #748F00;
+  animation: glow 1.5s linear infinite alternate;
+}
+@keyframes glow {
+  to {
+    box-shadow: 0px 0px 20px 20px #748F00;
+  }
+}
+
 /************ Character Tokens Info ***************/
 .characterInfo {
   width: 100vw;
@@ -79,9 +97,10 @@ main {
 }
 .characterInfo__item {
   max-width: 400px;
+  margin: 0 auto;
   margin-top: 0px;
   color: white;
-  margin: 0 auto;
+  padding: 20px;
   position: relative;
   top: 10%;
   width: 100%;
@@ -94,7 +113,7 @@ main {
   padding-top: 10px;
   margin-top: 50px;
   width: 40%;
-  font-size: 4.5vw;
+  font-size: 20px;
   margin: 50px auto;
 }
 
@@ -251,7 +270,14 @@ main {
 @media only screen and (min-width: 768px) {
   .characterInfo {
     font-size: 24px;
-    width: 30%;
+  }
+  .characterInfo__item {
+    padding: 0;
+  }
+  .characterInfo button {
+    max-width: 30%;
+    max-height: 45px;
+    font-size: 22px;
   }
 
   .characters__token--img {
@@ -313,7 +339,6 @@ main {
   .btnPlay {
     height: 12vh;
     font-size: 32px;
-    z-index: 4;
     position: relative;
     left: 85%;
     background-image: url(../Images/Icons/arrow_icon.png);
@@ -324,6 +349,12 @@ main {
   }
   .btnPlay:hover {
     background-color: rgba(0, 0, 0, 0);
+    animation: backgrpos 1.5s linear infinite alternate;
+  }
+  @keyframes backgrpos {
+    to {
+      background-position: bottom;
+    }
   }
 
   .header__logo {
