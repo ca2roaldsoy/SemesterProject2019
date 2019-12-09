@@ -246,10 +246,73 @@ main {
   top: 50px;
 }
 
-.player2 {
+.playerName {
+  position: absolute;
+  left: 300px;
+  top: 125px;
+  font-size: 40px;
+}
+
+.goal {
   position: absolute;
   right: 300px;
   top: 50px;
+}
+
+.sum {
+  position: absolute;
+  right: 325px;
+  top: 115px;
+  font-size: 40px;
+}
+.sum::first-letter {
+  color: #748F00;
+  font-size: 70px;
+}
+
+.token__1 {
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: aqua;
+}
+
+.jumbotron {
+  width: 80%;
+  height: 85%;
+  position: fixed;
+  z-index: 3;
+  top: 70px;
+  left: 200px;
+  background-color: rgba(0, 0, 0, 0.92);
+  transition: 0.5s;
+  text-align: center;
+  color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  display: none !important;
+}
+
+.jumboTitle {
+  font-size: 32px;
+}
+
+.jumboText {
+  text-align: left;
+  order: 3;
+  width: 60%;
+}
+
+.jumboImg {
+  order: 2;
+  width: 60%;
+  margin: 25px auto;
+}
+
+.jumbo__closeBtn {
+  order: 4;
+  width: 10%;
+  margin-top: 25px;
+  font-size: 18px;
 }
 
 .header {
@@ -349,11 +412,11 @@ main {
   }
   .btnPlay:hover {
     background-color: rgba(0, 0, 0, 0);
-    animation: backgrpos 1.5s linear infinite alternate;
+    animation: backgrpos 0.5s linear infinite alternate;
   }
   @keyframes backgrpos {
     to {
-      background-position: bottom;
+      background-position: 0px 10px;
     }
   }
 

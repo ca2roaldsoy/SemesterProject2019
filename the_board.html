@@ -5,22 +5,39 @@
     <meta charset="UTF-8">
     <meta name="description" content="Play a game of thrones board game">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Game of Thrones Board Game</title>
 </head>
+
 <body id="gameBoard">
 
-<div class="players">
-<h1 class="player1">Player 1</h1>
-<h1 class="player2">Player 2</h1>
-</div>
+    <div class="players">
 
-<div id="dice">
-    <img class="dice__eyes" id="diceNr" src="Images/Dice/1x/Dice1.png" alt="dice nr1">
-    <button id="diceRoll" style="top: 50px; left: 20px">Roll Dice</button>
-</div>
+        <h1 class="player1">Player:</h1>
+        <p class="playerName"></p>
 
+        <h1 class="goal">GOAL</h1>
+        <p class="sum">8</p>
+
+    </div>
+
+    <div id="dice">
+        <img class="dice__eyes" id="diceNr" src="Images/Dice/1x/Dice1.png" alt="dice nr1">
+        <button id="diceRoll" style="top: 50px; left: 20px">Roll Dice</button>
+    </div>
+
+    <div class="container [ jumbo ]">
+        <div class="jumbotron">
+            <h3 class="jumboTitle"></h3>
+            <img>
+            <p class="jumboText"></p>
+            <button role="button" class="btn btn-success [ jumbo__closeBtn ]" id="closeBtn">Continue</button>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="board.js"></script>
 </body>
 </html>

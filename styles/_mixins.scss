@@ -189,13 +189,13 @@
              &:hover {
 
                 background-color: rgba(0,0,0,0);
-                animation: backgrpos 1.5s linear infinite alternate;
+                animation: backgrpos .5s linear infinite alternate;
             
                 @keyframes backgrpos {
                 
                     to {
                     
-                        background-position: bottom;;
+                        background-position: 0px 10px;
                     }
                 }   
             }
