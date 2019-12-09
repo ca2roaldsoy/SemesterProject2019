@@ -270,7 +270,6 @@ main {
 @media only screen and (min-width: 768px) {
   .characterInfo {
     font-size: 24px;
-    width: 100%;
   }
   .characterInfo__item {
     padding: 0;
@@ -340,10 +339,6 @@ main {
   .btnPlay {
     height: 12vh;
     font-size: 32px;
-<<<<<<< HEAD
-    z-index: 4;
-=======
->>>>>>> 61991c363873e8b156f3327ee94ff5aca5c5af00
     position: relative;
     left: 85%;
     background-image: url(../Images/Icons/arrow_icon.png);
@@ -354,15 +349,12 @@ main {
   }
   .btnPlay:hover {
     background-color: rgba(0, 0, 0, 0);
-<<<<<<< HEAD
-=======
     animation: backgrpos 1.5s linear infinite alternate;
   }
   @keyframes backgrpos {
     to {
       background-position: bottom;
     }
->>>>>>> 61991c363873e8b156f3327ee94ff5aca5c5af00
   }
 
   .header__logo {
