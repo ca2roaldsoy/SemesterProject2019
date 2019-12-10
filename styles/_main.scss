@@ -7,13 +7,14 @@
     height: auto;
     font-size: 18px;
     color: $black;
+    overflow: scroll;
         
     &__token--img {
             
         width: 100%;
         margin: 0 auto;
-        margin-top: 10px;
-        
+        margin-top: 20px;
+      
         &:hover {
             
             cursor: pointer;
@@ -34,9 +35,16 @@
 
 .characters__container {
     
-    margin-top: 50px;
+    background-color: $orange;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
+.characterText {
+    
+    max-height: 120px;
+    overflow: scroll;
+}
 
 [type=radio] { 
   position: absolute;
@@ -58,47 +66,6 @@
                 box-shadow: 0px 0px 20px 20px $green;
             }
         }   
-}
-/************ Character Tokens Info ***************/
-.characterInfo {
-    
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 3;
-    top: 0px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    transition: 0.5s;
-    margin: 0 auto;
-    display: none;
-
-    &__item {
-
-        max-width: 400px;
-        margin: 0 auto;
-        margin-top: 0px;
-        color: white;
-        padding: 20px;
-        position: relative;
-        top: 10%;
-        width: 100%;
-
-        &--img {
-
-            width: 250px;
-        }
-    }
-        
-    button {
-            
-        display: block;
-        padding-top: 10px;
-        margin-top: 50px;
-        width: 40%;
-        font-size: 20px;
-        margin: 50px auto;
-    }
 }
 
 /************ Play Button ***************/
