@@ -1,4 +1,5 @@
 @import "mixins";
+@import "variables";
 
 /************ Character Tokens ***************/
 .characters {
@@ -7,10 +8,9 @@
     height: auto;
     font-size: 18px;
     color: $black;
-        
+   
     &__token--img {
             
-        width: 100%;
         margin: 0 auto;
         margin-top: 10px;
         
@@ -34,9 +34,9 @@
 
 .characters__container {
     
-    margin-top: 50px;
+    margin: 50px;
+     
 }
-
 
 [type=radio] { 
   position: absolute;
@@ -59,49 +59,21 @@
             }
         }   
 }
-/************ Character Tokens Info ***************/
-.characterInfo {
+
+.glow {
     
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 3;
-    top: 0px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    transition: 0.5s;
-    margin: 0 auto;
-    display: none;
-
-    &__item {
-
-        max-width: 400px;
-        margin: 0 auto;
-        margin-top: 0px;
-        color: white;
-        padding: 20px;
-        position: relative;
-        top: 10%;
-        width: 100%;
-
-        &--img {
-
-            width: 250px;
-        }
-    }
-        
-    button {
+    box-shadow: 0px 0px 10px 10px $white;
+    animation: glow 1.5s linear infinite alternate;
             
-        display: block;
-        padding-top: 10px;
-        margin-top: 50px;
-        width: 40%;
-        font-size: 20px;
-        margin: 50px auto;
-    }
+        @keyframes glow {
+                
+            to {
+                    
+                box-shadow: 0px 0px 20px 20px $orange;
+            }
+        }   
 }
-
-/************ Play Button ***************/
+/************ Buttons **************************/
 .btnPlay {
     
    position: fixed;
@@ -124,17 +96,52 @@
     }
 }
 
-.outerContainer {
+.btn {
     
-    width: 100%;
+    width: 20%;
+    
+    &:hover {
+        
+        color: $black;
+    }
+}
+
+.btnBack {
+    
+    height: 12vh;
+    width: 160px;
+    font-size: 18px;
+    top: 350px;
+    position: relative;
+    left: 100px;
+    background-image: url(../images/Icons/arrow_icon_backw.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+
+        &:hover {
+
+            background-color: rgba(0,0,0,0);
+            animation: backgrpos .5s linear infinite alternate;
+            
+            @keyframes backgrpos {
+                
+            to {
+                    
+                background-position: 0px 10px;
+            }
+        }   
+    }
 }
 
 /************ Game Board ***************/
 #gameBoard {
     
    background-image: 
-        url(../Images/Background/compass.png), 
-        url(../Images/Background/paper-68833_1280.jpg);
+        url(../images/mages/Background/compass.png), 
+        url(../images/Background/paper-68833_1280.jpg);
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
     background-size: 30%, cover;
@@ -185,6 +192,11 @@
     text-align: center;
     border: none;
     
+    &:hover {
+        
+        background-color: $green;
+    }
+    
 }
 
 /************ Players ***************/
@@ -220,7 +232,7 @@
 .sum {
     
     position: absolute;
-    right: 325px;
+    right: 280px;
     top: 115px;
     font-size: 40px;
     
@@ -233,26 +245,34 @@
 
 .token__1 {
     
-    border: 1px solid;
-    border-radius: 50%;
-    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+}
+
+.jumbo {
+    
+    display: none;
 }
 
 .jumbotron {
     
     width: 80%;
-    height: 85%;
+    height: 90%;
     position: fixed;
     z-index: 3;
-    top: 70px;
+    top: 30px;
     left: 200px;
-    background-color: rgba(0, 0, 0, 0.92);
+    background-color: rgba(0, 0, 0, .95);
     transition: 0.5s;
     text-align: center;
     color: $white;
     flex-direction: column;
     align-items: center;
-    display: none !important;
+    display: flex;
 }
 
 .jumboTitle {
@@ -281,3 +301,5 @@
     margin-top: 25px;
     font-size: 18px;
 }
+
+@include characterToken();
