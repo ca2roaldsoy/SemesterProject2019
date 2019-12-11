@@ -1,11 +1,21 @@
 @import "variables"; 
 
+@mixin characterToken () {
+    
+    .arya-stark {
+        
+        background-image: $arya_stark;
+        background-size: 200px 200px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
 
 @mixin gameBoard () {
     
     .box {
         
-        background-image: url(../Images/Background/tile_backgr.jpg);
+        background-image: url(../images/Background/tile_backgr.jpg);
         font-family: $fontRiseofKingdom;
         font-weight: 400;
         background-position: center;
@@ -17,7 +27,7 @@
         
         background-color: $green;
         color: $white;
-        background-image: url('../Images/Icons/arrow_icon.png');
+        background-image: url('../images/Icons/arrow_icon.png');
         background-size: contain;
         background-position: center;
         padding-top: 10px;
@@ -51,17 +61,17 @@
     
     #tile20 {
         
-        background-image: $lannister;
+        background-image: $stark;
     }
     
      #tile25 {
         
-        background-image: $stark;
+        background-image: $targaryen;
     }
     
      #tile28 {
         
-        background-image: $targaryen;
+        background-image: $lannister;
     }
     
     #tile30 {
@@ -75,7 +85,7 @@
         
 // Media Queries
 
-@mixin media {
+@mixin media () {
 
     /******************** Screen 768 px ******************/
     
@@ -111,13 +121,15 @@
 
         .characters {
 
-            width: 50%;
-            margin: 0 auto;
+            width: 100%;
             font-size: 18px;
+            margin: 0 auto;
+            
 
             &__token--img {
 
-                width: 50%;
+                width: 80%;
+                
             }
         }
 
@@ -127,7 +139,7 @@
             font-size: 32px;
             position: relative;
             left: 85%;
-            background-image: url(../Images/Icons/arrow_icon.png);
+            background-image: url(../images/Icons/arrow_icon.png);
             background-position: top;
             background-repeat: no-repeat;
             background-size: contain;
@@ -157,8 +169,8 @@
         #select_character {
             
            background-image: 
-                url(../Images/Background/scroll_v.png),
-                url(../Images/Background/backGr_lg.jpg);
+                url(../images/Background/scroll_v.png),
+                url(../images/Background/backGr_lg.jpg);
             
             background-size: 
                 115% 160%,

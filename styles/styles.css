@@ -11,7 +11,7 @@
 }
 #select_character {
   font-family: "RiseofKingdom", serif;
-  background-image: url(../Images/Background/scroll_h.png), url(../Images/Background/backGr_sm.jpg);
+  background-image: url(../images/Background/scroll_h.png), url(../images/Background/backGr_sm.jpg);
   background-repeat: no-repeat, repeat;
   background-position: center center, center;
   background-size: 140% 120%, 200px;
@@ -32,8 +32,7 @@ h2 {
 
 main {
   display: flex;
-  align-items: flex-start;
-  padding: 50px;
+  padding: 100px;
 }
 
 /************ Character Tokens ***************/
@@ -45,7 +44,6 @@ main {
   overflow: scroll;
 }
 .characters__token--img {
-  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -62,6 +60,7 @@ main {
 }
 
 .characters__container {
+<<<<<<< HEAD
   background-color: #C4450A;
   margin: 0 auto;
   margin-top: 20px;
@@ -70,6 +69,9 @@ main {
 .characterText {
   max-height: 120px;
   overflow: scroll;
+=======
+  margin: 50px;
+>>>>>>> e4c48fa4c803a4d728326c52364f997ac5ae0c3b
 }
 
 [type=radio] {
@@ -90,7 +92,21 @@ main {
   }
 }
 
+<<<<<<< HEAD
 /************ Play Button ***************/
+=======
+.glow {
+  box-shadow: 0px 0px 10px 10px #ffffff;
+  animation: glow 1.5s linear infinite alternate;
+}
+@keyframes glow {
+  to {
+    box-shadow: 0px 0px 20px 20px #C4450A;
+  }
+}
+
+/************ Buttons **************************/
+>>>>>>> e4c48fa4c803a4d728326c52364f997ac5ae0c3b
 .btnPlay {
   position: fixed;
   bottom: 0;
@@ -110,20 +126,47 @@ main {
   color: #C4450A;
 }
 
-.outerContainer {
-  width: 100%;
+.btn {
+  width: 20%;
+}
+.btn:hover {
+  color: #000000;
+}
+
+.btnBack {
+  height: 12vh;
+  width: 160px;
+  font-size: 18px;
+  top: 350px;
+  position: relative;
+  left: 100px;
+  background-image: url(../images/Icons/arrow_icon_backw.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+.btnBack:hover {
+  background-color: rgba(0, 0, 0, 0);
+  animation: backgrpos 0.5s linear infinite alternate;
+}
+@keyframes backgrpos {
+  to {
+    background-position: 0px 10px;
+  }
 }
 
 /************ Game Board ***************/
 #gameBoard {
-  background-image: url(../Images/Background/compass.png), url(../Images/Background/paper-68833_1280.jpg);
+  background-image: url(../images/Background/compass.png), url(../images/Background/paper-68833_1280.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: 30%, cover;
   background-attachment: fixed;
 }
 #gameBoard .box {
-  background-image: url(../Images/Background/tile_backgr.jpg);
+  background-image: url(../images/Background/tile_backgr.jpg);
   font-family: "RiseofKingdom", serif;
   font-weight: 400;
   background-position: center;
@@ -133,7 +176,7 @@ main {
 #gameBoard #tile0 {
   background-color: #748F00;
   color: #ffffff;
-  background-image: url("../Images/Icons/arrow_icon.png");
+  background-image: url("../images/Icons/arrow_icon.png");
   background-size: contain;
   background-position: center;
   padding-top: 10px;
@@ -150,22 +193,22 @@ main {
   color: #ffffff;
 }
 #gameBoard #tile5 {
-  background-image: url(../Images/sigils/baratheon.png);
+  background-image: url(../images/sigils/baratheon.png);
 }
 #gameBoard #tile7 {
-  background-image: url(../Images/sigils/Greyjoy.png);
+  background-image: url(../images/sigils/Greyjoy.png);
 }
 #gameBoard #tile20 {
-  background-image: url(../Images/sigils/Lannister.png);
+  background-image: url(../images/sigils/Stark.png);
 }
 #gameBoard #tile25 {
-  background-image: url(../Images/sigils/Stark.png);
+  background-image: url(../images/sigils/Targaryen.png);
 }
 #gameBoard #tile28 {
-  background-image: url(../Images/sigils/Targaryen.png);
+  background-image: url(../images/sigils/Lannister.png);
 }
 #gameBoard #tile30 {
-  background-image: url(../Images/Icons/1x/crown.png);
+  background-image: url(../images/Icons/1x/crown.png);
   background-size: 70px 50px;
   background-color: #000000;
 }
@@ -206,6 +249,9 @@ main {
   text-align: center;
   border: none;
 }
+#dice #diceRoll:hover {
+  background-color: #748F00;
+}
 
 /************ Players ***************/
 .players {
@@ -234,7 +280,7 @@ main {
 
 .sum {
   position: absolute;
-  right: 325px;
+  right: 280px;
   top: 115px;
   font-size: 40px;
 }
@@ -244,25 +290,32 @@ main {
 }
 
 .token__1 {
-  border: 1px solid;
-  border-radius: 50%;
-  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  bottom: 20px;
+  right: 10px;
+}
+
+.jumbo {
+  display: none;
 }
 
 .jumbotron {
   width: 80%;
-  height: 85%;
+  height: 90%;
   position: fixed;
   z-index: 3;
-  top: 70px;
+  top: 30px;
   left: 200px;
-  background-color: rgba(0, 0, 0, 0.92);
+  background-color: rgba(0, 0, 0, 0.95);
   transition: 0.5s;
   text-align: center;
   color: #ffffff;
   flex-direction: column;
   align-items: center;
-  display: none !important;
+  display: flex;
 }
 
 .jumboTitle {
@@ -286,6 +339,13 @@ main {
   width: 10%;
   margin-top: 25px;
   font-size: 18px;
+}
+
+.arya-stark {
+  background-image: url(../images/Tokens/arya_stark_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .header {
@@ -323,12 +383,21 @@ main {
 /******************** Screen 1200 px ****************/
 @media only screen and (min-width: 1200px) {
   .characters {
+<<<<<<< HEAD
     width: 50%;
     margin: 0 auto;
     font-size: 18px;
   }
   .characters__token--img {
     width: 50%;
+=======
+    width: 100%;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  .characters__token--img {
+    width: 80%;
+>>>>>>> e4c48fa4c803a4d728326c52364f997ac5ae0c3b
   }
 
   .btnPlay {
@@ -336,7 +405,7 @@ main {
     font-size: 32px;
     position: relative;
     left: 85%;
-    background-image: url(../Images/Icons/arrow_icon.png);
+    background-image: url(../images/Icons/arrow_icon.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -358,7 +427,7 @@ main {
   }
 
   #select_character {
-    background-image: url(../Images/Background/scroll_v.png), url(../Images/Background/backGr_lg.jpg);
+    background-image: url(../images/Background/scroll_v.png), url(../images/Background/backGr_lg.jpg);
     background-size: 115% 160%, 300px;
   }
 }

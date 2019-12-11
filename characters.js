@@ -42,7 +42,9 @@ playBtn.addEventListener("click", function(){
     window.location.href = "the_board.html"
 });
 
+
 counter = 0;
+
 function apiReq (ids){
 var api = ("https://anapioficeandfire.com/api/characters/" + ids);
 fetch(api)
