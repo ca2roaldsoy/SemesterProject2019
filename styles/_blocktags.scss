@@ -6,8 +6,8 @@
     font-family: $fontRiseofKingdom;
     
      background-image: 
-        url(../Images/Background/scroll_h.png), 
-        url(../Images/Background/backGr_sm.jpg);
+        url(../images/Background/scroll_h.png), 
+        url(../images/Background/backGr_sm.jpg);
     
     background-repeat: 
         no-repeat, 
@@ -37,6 +37,5 @@ h2 {
 main {
  
     display: flex;
-    align-items: flex-start;
-    padding: 50px;
+    padding: 100px;
 }

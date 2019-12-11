@@ -11,7 +11,7 @@
 }
 #select_character {
   font-family: "RiseofKingdom", serif;
-  background-image: url(../Images/Background/scroll_h.png), url(../Images/Background/backGr_sm.jpg);
+  background-image: url(../images/Background/scroll_h.png), url(../images/Background/backGr_sm.jpg);
   background-repeat: no-repeat, repeat;
   background-position: center center, center;
   background-size: 140% 120%, 200px;
@@ -32,8 +32,7 @@ h2 {
 
 main {
   display: flex;
-  align-items: flex-start;
-  padding: 50px;
+  padding: 100px;
 }
 
 /************ Character Tokens ***************/
@@ -44,7 +43,6 @@ main {
   color: #000000;
 }
 .characters__token--img {
-  width: 100%;
   margin: 0 auto;
   margin-top: 10px;
 }
@@ -61,7 +59,7 @@ main {
 }
 
 .characters__container {
-  margin-top: 50px;
+  margin: 50px;
 }
 
 [type=radio] {
@@ -82,42 +80,17 @@ main {
   }
 }
 
-/************ Character Tokens Info ***************/
-.characterInfo {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 3;
-  top: 0px;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  transition: 0.5s;
-  margin: 0 auto;
-  display: none;
+.glow {
+  box-shadow: 0px 0px 10px 10px #ffffff;
+  animation: glow 1.5s linear infinite alternate;
 }
-.characterInfo__item {
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 0px;
-  color: white;
-  padding: 20px;
-  position: relative;
-  top: 10%;
-  width: 100%;
-}
-.characterInfo__item--img {
-  width: 250px;
-}
-.characterInfo button {
-  display: block;
-  padding-top: 10px;
-  margin-top: 50px;
-  width: 40%;
-  font-size: 20px;
-  margin: 50px auto;
+@keyframes glow {
+  to {
+    box-shadow: 0px 0px 20px 20px #C4450A;
+  }
 }
 
-/************ Play Button ***************/
+/************ Buttons **************************/
 .btnPlay {
   position: fixed;
   bottom: 0;
@@ -137,20 +110,47 @@ main {
   color: #C4450A;
 }
 
-.outerContainer {
-  width: 100%;
+.btn {
+  width: 20%;
+}
+.btn:hover {
+  color: #000000;
+}
+
+.btnBack {
+  height: 12vh;
+  width: 160px;
+  font-size: 18px;
+  top: 350px;
+  position: relative;
+  left: 100px;
+  background-image: url(../images/Icons/arrow_icon_backw.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+.btnBack:hover {
+  background-color: rgba(0, 0, 0, 0);
+  animation: backgrpos 0.5s linear infinite alternate;
+}
+@keyframes backgrpos {
+  to {
+    background-position: 0px 10px;
+  }
 }
 
 /************ Game Board ***************/
 #gameBoard {
-  background-image: url(../Images/Background/compass.png), url(../Images/Background/paper-68833_1280.jpg);
+  background-image: url(../images/Background/compass.png), url(../images/Background/paper-68833_1280.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: 30%, cover;
   background-attachment: fixed;
 }
 #gameBoard .box {
-  background-image: url(../Images/Background/tile_backgr.jpg);
+  background-image: url(../images/Background/tile_backgr.jpg);
   font-family: "RiseofKingdom", serif;
   font-weight: 400;
   background-position: center;
@@ -160,7 +160,7 @@ main {
 #gameBoard #tile0 {
   background-color: #748F00;
   color: #ffffff;
-  background-image: url("../Images/Icons/arrow_icon.png");
+  background-image: url("../images/Icons/arrow_icon.png");
   background-size: contain;
   background-position: center;
   padding-top: 10px;
@@ -177,22 +177,22 @@ main {
   color: #ffffff;
 }
 #gameBoard #tile5 {
-  background-image: url(../Images/sigils/baratheon.png);
+  background-image: url(../images/sigils/baratheon.png);
 }
 #gameBoard #tile7 {
-  background-image: url(../Images/sigils/Greyjoy.png);
+  background-image: url(../images/sigils/Greyjoy.png);
 }
 #gameBoard #tile20 {
-  background-image: url(../Images/sigils/Lannister.png);
+  background-image: url(../images/sigils/Stark.png);
 }
 #gameBoard #tile25 {
-  background-image: url(../Images/sigils/Stark.png);
+  background-image: url(../images/sigils/Targaryen.png);
 }
 #gameBoard #tile28 {
-  background-image: url(../Images/sigils/Targaryen.png);
+  background-image: url(../images/sigils/Lannister.png);
 }
 #gameBoard #tile30 {
-  background-image: url(../Images/Icons/1x/crown.png);
+  background-image: url(../images/Icons/1x/crown.png);
   background-size: 70px 50px;
   background-color: #000000;
 }
@@ -233,6 +233,9 @@ main {
   text-align: center;
   border: none;
 }
+#dice #diceRoll:hover {
+  background-color: #748F00;
+}
 
 /************ Players ***************/
 .players {
@@ -261,7 +264,7 @@ main {
 
 .sum {
   position: absolute;
-  right: 325px;
+  right: 280px;
   top: 115px;
   font-size: 40px;
 }
@@ -271,25 +274,32 @@ main {
 }
 
 .token__1 {
-  border: 1px solid;
-  border-radius: 50%;
-  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  bottom: 20px;
+  right: 10px;
+}
+
+.jumbo {
+  display: none;
 }
 
 .jumbotron {
   width: 80%;
-  height: 85%;
+  height: 90%;
   position: fixed;
   z-index: 3;
-  top: 70px;
+  top: 30px;
   left: 200px;
-  background-color: rgba(0, 0, 0, 0.92);
+  background-color: rgba(0, 0, 0, 0.95);
   transition: 0.5s;
   text-align: center;
   color: #ffffff;
   flex-direction: column;
   align-items: center;
-  display: none !important;
+  display: flex;
 }
 
 .jumboTitle {
@@ -315,6 +325,13 @@ main {
   font-size: 18px;
 }
 
+.arya-stark {
+  background-image: url(../images/Tokens/arya_stark_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .header {
   display: block;
   margin: 0 auto;
@@ -331,18 +348,6 @@ main {
 
 /******************** Screen 768 px ******************/
 @media only screen and (min-width: 768px) {
-  .characterInfo {
-    font-size: 24px;
-  }
-  .characterInfo__item {
-    padding: 0;
-  }
-  .characterInfo button {
-    max-width: 30%;
-    max-height: 45px;
-    font-size: 22px;
-  }
-
   .characters__token--img {
     width: 70%;
   }
@@ -361,42 +366,13 @@ main {
 }
 /******************** Screen 1200 px ****************/
 @media only screen and (min-width: 1200px) {
-  .characterInfo {
-    display: block;
-    background-image: url(../Images/Background/info_paper.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    height: 40vw;
-    width: 20vw;
-    left: 70%;
-    top: 70%;
-    position: absolute;
-    text-align: center;
-  }
-  .characterInfo__item {
-    width: 100%;
-    max-width: 90%;
-    color: #000000;
-    font-size: 18px;
-  }
-  .characterInfo__item--img {
-    width: 100%;
-    height: auto;
-  }
-  .characterInfo button {
-    display: none;
-  }
-
   .characters {
-    width: 60%;
+    width: 100%;
     font-size: 18px;
-    margin-left: 70px;
+    margin: 0 auto;
   }
   .characters__token--img {
-    width: 100%;
+    width: 80%;
   }
 
   .btnPlay {
@@ -404,7 +380,7 @@ main {
     font-size: 32px;
     position: relative;
     left: 85%;
-    background-image: url(../Images/Icons/arrow_icon.png);
+    background-image: url(../images/Icons/arrow_icon.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -426,7 +402,7 @@ main {
   }
 
   #select_character {
-    background-image: url(../Images/Background/scroll_v.png), url(../Images/Background/backGr_lg.jpg);
+    background-image: url(../images/Background/scroll_v.png), url(../images/Background/backGr_lg.jpg);
     background-size: 115% 160%, 300px;
   }
 }
