@@ -7,7 +7,8 @@
         background-image: $arya_stark;
         background-size: 200px 200px;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center;
+        
     }
 }
 
@@ -15,7 +16,8 @@
     
     .box {
         
-        background-image: url(../images/Background/tile_backgr.jpg);
+        background-color: rgba(0, 0, 0, 0.9);
+        border: 3px solid $white;
         font-family: $fontRiseofKingdom;
         font-weight: 400;
         background-position: center;
@@ -26,6 +28,7 @@
     #tile0 {
         
         background-color: $green;
+        border: none;
         color: $white;
         background-image: url('../images/Icons/arrow_icon.png');
         background-size: contain;
@@ -37,6 +40,7 @@
     #tile15 {
         
         background: none;
+        border: none;
         color: $white;
         padding-top: 10px;
         background-color: $green;
@@ -45,37 +49,49 @@
     #tile11, #tile29 {
         
         background: none;
+        border: none;
         background-color: $red;
         color: $white;
     }
 
     #tile5 {
     
+        background-color: rgba(0, 0, 0, 0);
         background-image: $baratheon;
+        border: none;
     }
     
     #tile7 {
         
+        background-color: rgba(0, 0, 0, 0);
         background-image: $greyjoy;
+        border: none;
     }
     
     #tile20 {
         
+        background-color: rgba(0, 0, 0, 0);
         background-image: $stark;
+        border: none;
     }
     
      #tile25 {
         
+        background-color: rgba(0, 0, 0, 0);
         background-image: $targaryen;
+        border: none;
     }
     
      #tile28 {
         
+        background-color: rgba(0, 0, 0, 0);
         background-image: $lannister;
+        border: none;
     }
     
     #tile30 {
         
+        border: none;
         background-image: $crown;
         background-size: 70px 50px;
         background-color: $black;
@@ -90,21 +106,42 @@
     /******************** Screen 768 px ******************/
     
     @media only screen and (min-width: 768px) { 
-
-        .characters {
-
-            &__token--img {
-
-                width: 70%;
-            }
+        
+        .card {
+            
+            padding: 15px;
+            margin: 15px;
+            width: 200px;
+            height: 65vh;
+            font-size: 16px;
         }
-
+        
+        .card-title {
+            
+            font-size: 18px;
+        }
+        
+        .card-text:first-line {
+            
+            font-size: 18px;
+        }
+        
+         #banner {
+            
+             width: 100%;
+             height: auto;
+             margin: 0;
+             padding: 0;
+        }
+ 
         .btnPlay {
 
             font-size: 24px;
             height: auto;
             max-width: 200px;
             right: 0;
+            margin: 0 auto;
+            display: inline-block;
 
         }
         
@@ -118,43 +155,50 @@
      /******************** Screen 1200 px ****************/
     
     @media only screen and (min-width: 1200px) { 
-
-        .characters {
-
-            width: 100%;
-            font-size: 18px;
-            margin: 0 auto;
+        
+        .card {
             
-
-            &__token--img {
-
-                width: 80%;
-                
-            }
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            height: 65vh;
         }
-
+        
+        .card-text:first-line {
+            
+            font-size: 18px;
+        }
+        
+        #banner {
+            
+            margin-left: 5px;
+            margin-bottom: 50px;
+        }
+        
         .btnPlay {
 
-            height: 12vh;
+            height: 80px;
             font-size: 32px;
-            position: relative;
-            left: 85%;
+            position: fixed;
+            left: 34%;
             background-image: url(../images/Icons/arrow_icon.png);
-            background-position: top;
+            background-position: 25px 10px;
             background-repeat: no-repeat;
-            background-size: contain;
-            background-color: rgba(0,0,0,0);
+            background-size: 150px 30px;
+            background-color: rgba(0,0,0,0.9);
+            display: inline-block;
+            padding-top: 40px;
 
              &:hover {
 
-                background-color: rgba(0,0,0,0);
+                background-color: rgba(0,0,0,0.9);
                 animation: backgrpos .5s linear infinite alternate;
             
                 @keyframes backgrpos {
                 
                     to {
                     
-                        background-position: 0px 10px;
+                        background-position: 25px 15px;
                     }
                 }   
             }
@@ -164,17 +208,6 @@
             
             width: 20em;
             height: 250px;
-        }
-        
-        #select_character {
-            
-           background-image: 
-                url(../images/Background/scroll_v.png),
-                url(../images/Background/backGr_lg.jpg);
-            
-            background-size: 
-                115% 160%,
-                300px;
         }
     }
 }

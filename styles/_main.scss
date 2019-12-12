@@ -2,27 +2,28 @@
 @import "variables";
 
 /************ Character Tokens ***************/
+#select_character {
+            
+    background-image: url(../images/Background/wolf-1341881_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .characters {
 
-    width: 100%;
     height: auto;
     font-size: 18px;
     color: $black;
-<<<<<<< HEAD
-    overflow: scroll;
-        
-=======
-   
->>>>>>> e4c48fa4c803a4d728326c52364f997ac5ae0c3b
+
     &__token--img {
             
-        margin: 0 auto;
         margin-top: 20px;
       
         &:hover {
             
-            cursor: pointer;
             border-radius: 50%;
+            cursor: pointer;
             box-shadow: 0px 0px 10px 10px $white;
             animation: backgrglow 1.5s linear infinite alternate;
             
@@ -30,33 +31,37 @@
                 
                 to {
                     
-                    box-shadow: 0px 0px 20px 20px $white;
+                    box-shadow: 0px 0px 20px 20px $orange;
                 }
             }   
         }
     }
 }
 
-.characters__container {
+.card-title {
     
-<<<<<<< HEAD
-    background-color: $orange;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 7vw;
 }
 
-.characterText {
+.card {
     
-    max-height: 120px;
-    overflow: scroll;
+    padding: 30px;
+    margin: 25px 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 4vw;
 }
 
-=======
-    margin: 50px;
-     
+.card-text:first-line {
+            
+    font-size: 18px;
 }
 
->>>>>>> e4c48fa4c803a4d728326c52364f997ac5ae0c3b
 [type=radio] { 
   position: absolute;
   opacity: 0;
@@ -64,10 +69,10 @@
   height: 0;
 }
 
-[type=radio]:checked + .glow {
+input[type=radio]:checked + .glow {
   
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 10px $green;
+    box-shadow: 0px 0px 50px 50px $green;
     animation: glow 1.5s linear infinite alternate;
             
         @keyframes glow {
@@ -79,35 +84,19 @@
         }   
 }
 
-<<<<<<< HEAD
-/************ Play Button ***************/
-=======
-.glow {
-    
-    box-shadow: 0px 0px 10px 10px $white;
-    animation: glow 1.5s linear infinite alternate;
-            
-        @keyframes glow {
-                
-            to {
-                    
-                box-shadow: 0px 0px 20px 20px $orange;
-            }
-        }   
-}
 /************ Buttons **************************/
->>>>>>> e4c48fa4c803a4d728326c52364f997ac5ae0c3b
+
 .btnPlay {
     
-   position: fixed;
+    position: fixed;
     bottom: 0;
-    left: 25%;
+    left: 35%;
     z-index: 2;
-    margin: 0 auto;
     display: block;
-    width: 50%;
-    height: 30px;
+    width: 40vw;
+    height: 50px;
     border-radius: 5px 5px 0 0;
+    font-size: 24px;
     background-color: $orange;
     color: $white;
     
@@ -116,16 +105,6 @@
         cursor: pointer;
         background-color: $white;
         color: $orange;
-    }
-}
-
-.btn {
-    
-    width: 20%;
-    
-    &:hover {
-        
-        color: $black;
     }
 }
 
@@ -138,7 +117,7 @@
     position: relative;
     left: 100px;
     background-image: url(../images/Icons/arrow_icon_backw.png);
-    background-position: top;
+    background-position: 0px 10px;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: rgba(0,0,0,0);
@@ -150,10 +129,10 @@
             animation: backgrpos .5s linear infinite alternate;
             
             @keyframes backgrpos {
-                
+        
             to {
                     
-                background-position: 0px 10px;
+                background-position: 0px 20px;
             }
         }   
     }
@@ -163,11 +142,10 @@
 #gameBoard {
     
    background-image: 
-        url(../images/mages/Background/compass.png), 
-        url(../images/Background/paper-68833_1280.jpg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-    background-size: 30%, cover;
+        url(../images/Background/mandala-1874410_1280.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     @include gameBoard();
     
@@ -235,6 +213,7 @@
     position: absolute;
     left: 300px;
     top: 50px;
+    color: $white;
 }
 
 .playerName {
@@ -243,6 +222,7 @@
     left: 300px;
     top: 125px;
     font-size: 40px;
+    color: $orange;
 }
 
 .goal {
@@ -250,6 +230,7 @@
     position: absolute;
     right: 300px;
     top: 50px;
+    color: $white;
 }
 
 .sum {
@@ -258,6 +239,7 @@
     right: 280px;
     top: 115px;
     font-size: 40px;
+    color: $orange;
     
     &::first-letter {
         
@@ -296,6 +278,7 @@
     flex-direction: column;
     align-items: center;
     display: flex;
+    border: 1px solid $orange;
 }
 
 .jumboTitle {
