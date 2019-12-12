@@ -2,12 +2,15 @@
 var allTokens = document.querySelectorAll(".characters__token--img");
 var selected = document.querySelector("input[name='token']:checked"); 
 var chInfo = document.getElementById("banner");
+var playBtn = document.getElementById("playBtn");
+playBtn.style.display = "none";
 
 allTokens.forEach(function(token){
     
     token.addEventListener("click", function(){
         
         var playerName = this.dataset.name;
+        playBtn.style.display = "block";
         
         if(selected != null) {
             
@@ -39,7 +42,7 @@ function removeStorage(player) {
 var playBtn = document.getElementById("playBtn");
 playBtn.addEventListener("click", function(){
     
-    window.location.href = "the_board.html"
+    window.location.href = "board.html"
 });
 
 
@@ -66,24 +69,18 @@ fetch(api)
     switch (ids) {
 
             case ids:   cardBody.innerHTML += "<h3 class='card-title'>" + res.name + "</h3>";
-                        cardBody.innerHTML += "<p class='card-text'><b> Title: </b>" + res.titles + "</p>";
-                        ul.innerHTML += "<li class='list-group-item'><b> Born: </b>" + res.born + "</li>";
-                        ul.innerHTML += "<li class='list-group-item'><b> Culture: </b>" + res.culture + "</li>";
-            
-                        if(res.culture == "") {
+                        cardBody.innerHTML += "<p class='card-text'><b> Title: </b><br>" + res.titles[0] + "</p>";
+                        
+                        if(res.titles[0] == "") {
                 
-                        ul.innerHTML += "<li class='list-group-item'>Unkown</li>";
+                        cardBody.innerHTML += "<p class='card-text'>Unknown</p>";
                             
                         }
             
-                        if(res.title == "") {
-                
-                        label.innerHTML += "<p class='card-body'>Unkown</p>";
-                            
-                        }
+                        cardBody.innerHTML += "<p class='card-text'><b> Alias: </b><br>" + res.aliases[0] + "</p>";
+                        cardBody.innerHTML += "<p class='card-text'><b> Born: </b><br>" + res.born + "</p>";
                 break;
     }
-    
     
 })
     
