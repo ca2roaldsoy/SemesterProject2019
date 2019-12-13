@@ -26,7 +26,6 @@ allTokens.forEach(function(token){
 });
 
 
-
 //Save to Local Storage
 function saveStorage(player) {
     
