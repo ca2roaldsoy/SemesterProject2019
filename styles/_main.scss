@@ -13,7 +13,6 @@
 .characters {
 
     height: auto;
-    font-size: 18px;
     color: $black;
 
     &__token--img {
@@ -48,7 +47,7 @@
     
     padding: 30px;
     margin: 25px 50px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -87,7 +86,7 @@ input[type=radio]:checked + .glow {
 
 .tokens {
     
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /************ Buttons **************************/
@@ -315,3 +314,14 @@ input[type=radio]:checked + .glow {
 }
 
 @include characterToken();
+
+/************ Winner Page ***************/
+
+#winner {
+    
+    background-image: url(../images/Background/fantasy-4627392_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}

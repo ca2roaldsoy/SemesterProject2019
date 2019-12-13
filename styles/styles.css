@@ -39,7 +39,6 @@ main {
 
 .characters {
   height: auto;
-  font-size: 18px;
   color: #000000;
 }
 .characters__token--img {
@@ -65,7 +64,7 @@ main {
 .card {
   padding: 30px;
   margin: 25px 50px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -98,7 +97,7 @@ input[type=radio]:checked + .glow {
 }
 
 .tokens {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /************ Buttons **************************/
@@ -356,6 +355,15 @@ input[type=radio]:checked + .glow {
   background-position: center;
 }
 
+/************ Winner Page ***************/
+#winner {
+  background-image: url(../images/Background/fantasy-4627392_1280.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 .header {
   display: block;
   margin: 0 auto;
@@ -415,6 +423,7 @@ input[type=radio]:checked + .glow {
     margin: 10px;
     width: 200px;
     height: 65vh;
+    font-weight: 400;
   }
 
   .card-text:first-line {

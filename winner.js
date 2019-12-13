@@ -59,3 +59,15 @@ else {
     
     alert("your browser does not support html canvas")
 }
+
+/*var playerName = document.querySelector(".playerName");
+var getLocal;
+
+function getStorage(arg1) {
+    
+    getLocal = localStorage.getItem(arg1);
+    playerName.innerHTML = getLocal;
+    
+};
+
+getStorage("player");*/
