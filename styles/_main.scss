@@ -4,11 +4,9 @@
 /************ Character Tokens ***************/
 #select_character {
             
-    background-image: url(../images/Background/wolf-1341881_1280.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    background-image: url(../images/Background/index_backgrImg.jpg);
+    @include backgrImg ();
+}    
 
 .characters {
 
@@ -49,9 +47,7 @@
     padding: 30px;
     margin: 25px 50px;
     background-color: rgba(0, 0, 0, 0.8);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include backgrImg ();
     border: 1px solid black;
     border-radius: 5px;
     font-size: 4vw;
@@ -148,12 +144,10 @@ input[type=radio]:checked + .glow {
 #gameBoard {
     
    background-image: 
-        url(../images/Background/mandala-1874410_1280.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+        url(../images/Background/board_backgrImg_v2.png);
     background-attachment: fixed;
     @include gameBoard();
+    @include backgrImg ()
     
 }
 

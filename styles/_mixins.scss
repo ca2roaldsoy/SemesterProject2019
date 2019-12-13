@@ -1,14 +1,79 @@
 @import "variables"; 
 
+@mixin backgrImg () {
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin tokenImg () {
+    
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+
 @mixin characterToken () {
     
     .arya-stark {
         
         background-image: $arya_stark;
-        background-size: 200px 200px;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include tokenImg();
+    }
+    
+    .sansa-stark {
         
+        background-image: $sansa_stark;
+        @include tokenImg();
+    }
+    
+    .eddard-stark {
+        
+        background-image: $eddard_stark;
+        @include tokenImg();
+    }
+    
+    .jon-snow {
+        
+        background-image: $jon_snow;
+        @include tokenImg();
+    }
+    
+    .jaime-lannister {
+        
+        background-image: $jaime_lannister;
+        @include tokenImg();
+    }
+    
+    .tyrion-lannister {
+        
+        background-image: $tyrion_lannister;
+        @include tokenImg();
+    }
+    
+    .joffrey-baratheon {
+        
+        background-image: $joffrey_bara;
+        @include tokenImg();
+    }
+    
+    .robert-baratheon {
+        
+        background-image: $robert_bara;
+        @include tokenImg();
+    }
+    
+    .daenerys-targaryen{
+        
+        background-image: $daenny_targ;
+        @include tokenImg();
+    }
+    
+    .theon-greyjoy {
+        
+        background-image: $theon_grey;
+        @include tokenImg();
     }
 }
 
@@ -20,9 +85,7 @@
         border: 3px solid $white;
         font-family: $dutch-mediaeval-pro;
         font-weight: 400;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include backgrImg ();
     }
     
     #tile0 {

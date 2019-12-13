@@ -31,10 +31,10 @@ main {
 
 /************ Character Tokens ***************/
 #select_character {
-  background-image: url(../images/Background/wolf-1341881_1280.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url(../images/Background/index_backgrImg.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .characters {
@@ -67,8 +67,8 @@ main {
   margin: 25px 50px;
   background-color: rgba(0, 0, 0, 0.8);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   border: 1px solid black;
   border-radius: 5px;
   font-size: 4vw;
@@ -147,11 +147,11 @@ input[type=radio]:checked + .glow {
 
 /************ Game Board ***************/
 #gameBoard {
-  background-image: url(../images/Background/mandala-1874410_1280.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url(../images/Background/board_backgrImg_v2.png);
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #gameBoard .box {
   background-color: rgba(0, 0, 0, 0.9);
@@ -351,6 +351,69 @@ input[type=radio]:checked + .glow {
 
 .arya-stark {
   background-image: url(../images/Tokens/arya_stark_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sansa-stark {
+  background-image: url(../images/Tokens/sansa_stark_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.eddard-stark {
+  background-image: url(../images/Tokens/eddard_stark_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.jon-snow {
+  background-image: url(../images/Tokens/jon_snow_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.jaime-lannister {
+  background-image: url(../images/Tokens/jamie_lannister_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tyrion-lannister {
+  background-image: url(../images/Tokens/tyrion_lannister_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.joffrey-baratheon {
+  background-image: url(../images/Tokens/joffrey_baratheon_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.robert-baratheon {
+  background-image: url(../images/Tokens/robert_baratheon_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.daenerys-targaryen {
+  background-image: url(../images/Tokens/daenerys_targaryen_token.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.theon-greyjoy {
+  background-image: url(../images/Tokens/theon_greyjoy_token.png);
   background-size: 200px 200px;
   background-repeat: no-repeat;
   background-position: center;
