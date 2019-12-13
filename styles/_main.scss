@@ -230,6 +230,20 @@ input[type=radio]:checked + .glow {
     color: $orange;
 }
 
+.playerScore {
+    
+    width: 80%;
+    height: auto;
+    color: $white;
+    font-size: 72px;
+    z-index: 5;
+    text-align: center;
+    display: none;
+    background-color: rgba(255, 0, 0, 0.8);
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
 .goal {
     
     position: absolute;
@@ -319,9 +333,49 @@ input[type=radio]:checked + .glow {
 
 #winner {
     
-    background-image: url(../images/Background/fantasy-4627392_1280.jpg);
+    background-image: url(../images/Background/flame_backgr_2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+#winnerText {
+    
+    width: 100%;
+    height: auto;
+    color: $white;
+    font-size: 72px;
+    text-align: center;
+    margin-top: 100px;
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.tokenImg {
+    
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#scoreBtn, #playAgainBtn {
+    
+    max-width: 50%;
+    height: auto;
+    margin: 40px auto;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: $white;
+    
+}
+
+#playAgainBtn {
+    
+    background-color: rgba(0, 128, 0, 0.8);
 }
