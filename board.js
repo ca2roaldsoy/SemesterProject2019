@@ -125,7 +125,7 @@ function game () {
     // Start the Game
     window.onload = setTimeout(function () {    
     jumboTitle.innerHTML = "Play Game";
-    jumboText.innerHTML = "Cersei Lannister is about to take the crown and rule the 7 kingdoms! <br> We recon you got <strong>8</strong> turns to get the crown before here. Be aware as she watches for everyone. It is up to you " + getLocal + ", to take the crown before here.<br><br> If you role <strong>6</strong>, you get an extra turn! <br><br>Start by rolling the dice<br><i>When you are ready press 'Play Game'";
+    jumboText.innerHTML = "Cersei Lannister is about to take the crown and rule the seven kingdoms! <br> We recon you got <strong>8</strong> turns to get the crown before here. Be aware as she watches for everyone. It is up to you " + getLocal + ", to take the crown before here.<br><br> Please be sure to visit the houses, you might be lucky.<br><br> If you role <strong>6</strong>, you get an extra turn! Start by rolling the dice<br><i>When you are ready press 'Play Game'";
     jumboImg.src = "images/Logo/swordLogo.png";
     jumboImg.alt = "Two swords crossing a crown";
     jumbo.style.display = "flex";
@@ -206,7 +206,7 @@ function game () {
                      } else if (currentTile.id == "tile15") {
 
                          jumboTitle.innerHTML = "Help from an ally";
-                         jumboText.innerHTML = "An ally has come to your aid you on your mission <br> Get an extra turn";
+                         jumboText.innerHTML = "Hodor has come to your aid you on your mission. He will hold the door so the enemies can't reach you! <br> Get an extra turn";
                          jumboImg.src = "images/jumbo/aid.jpg";
                          jumboImg.alt = "Knight in armour";
                          jumbo.style.display = "flex";
