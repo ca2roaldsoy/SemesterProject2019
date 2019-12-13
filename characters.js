@@ -26,7 +26,6 @@ allTokens.forEach(function(token){
 });
 
 
-
 //Save to Local Storage
 function saveStorage(player) {
     
@@ -69,7 +68,7 @@ fetch(api)
     switch (ids) {
 
             case ids:   cardBody.innerHTML += "<h3 class='card-title'>" + res.name + "</h3>";
-                        cardBody.innerHTML += "<p class='card-text'><b> Title: </b><br>" + res.titles[0] + "</p>";
+                        cardBody.innerHTML += "<p class='card-text'> Title: <br>" + res.titles[0] + "</p>";
                         
                         if(res.titles[0] == "") {
                 
@@ -77,8 +76,8 @@ fetch(api)
                             
                         }
             
-                        cardBody.innerHTML += "<p class='card-text'><b> Alias: </b><br>" + res.aliases[0] + "</p>";
-                        cardBody.innerHTML += "<p class='card-text'><b> Born: </b><br>" + res.born + "</p>";
+                        cardBody.innerHTML += "<p class='card-text'>Alias: <br>" + res.aliases[0] + "</p>";
+                        cardBody.innerHTML += "<p class='card-text'> Born: <br>" + res.born + "</p>";
                 break;
     }
     

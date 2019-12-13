@@ -145,38 +145,7 @@ function game () {
 
             counter++;
             sum.innerHTML = "<b>" + counter + "</b>" + "/8";
-            diceRoll.classList.remove("glow")
-            console.log(sum);
-
-            // defeat
-            if(counter > 8) {
-
-                setTimeout(function () {
-                jumboTitle.innerHTML = "Defeat";
-                jumboText.innerHTML = "This is a sad day. Cersei Lannister has been given the crown, and now rules the 7 kingdoms";
-                jumboImg.src = "images/jumbo/knight_defeat.jpg";
-                jumboImg.alt = "defeated knight";
-                jumbo.style.display = "flex";
-                jumbo.style.zIndex = 10;
-                button.textContent = "Try Again";
-                button.style.backgroundColor = "#C20C0C";
-                diceCount = 0;
-                button.addEventListener("click", function() {
-
-                    window.location.href = "index.html";
-                })
-
-                }, 4000)
-            };
-
-            // victory
-            if(token === tiles.length && counter <= 8) {
-
-                diceCount = 0;
-                window.location.href = "winner.html";
-
-            }
-
+            
             // initialize game
             var interval = setInterval(function(){
 
@@ -191,7 +160,6 @@ function game () {
 
                 var max = 6;
                 var roll = Math.ceil(Math.random() * 6);
-                console.log(roll);
 
                 // add roll to player score
                 playerScore += roll;
@@ -213,8 +181,8 @@ function game () {
 
                 // append the token to the tile
                 var currentTile = document.getElementById("tile" + playerScore);
-                currentTile.appendChild(token);
-
+                console.log(playerScore);
+                 
                 // move token x spaces
                 setTimeout(function() {
 
@@ -223,6 +191,7 @@ function game () {
 
                          currentTile = document.getElementById("tile8");
                          currentTile.appendChild(token);
+                         playerScore -= 3;
 
                          jumboTitle.innerHTML = "You are under attack";
                          jumboText.innerHTML = "Cersei Lannister has sent her evil minions to stop you for moving forward. <br> You are outnumbered <br><br> Retreat, Retreat, Retreat";
@@ -251,6 +220,7 @@ function game () {
 
                          currentTile = document.getElementById("tile24");
                          currentTile.appendChild(token);
+                         playerScore -= 5;
 
                          jumboTitle.innerHTML = "Watch out Cersei Lannister is on to you";
                          jumboText.innerHTML =  "Cersei Lannister has sensed your coming. She has taken her guards out to search for you. <br><br> Hurry " + getLocal + " Retreat back to safety";
@@ -260,6 +230,7 @@ function game () {
                          jumboImg.style.width = "720px";
                          button.style.backgroundColor = "#C20C0C";
                          button.textContent = "Move back 5 spaces";
+                         
 
                      // Tile 5 - House Baratheon
                      } else if (currentTile.id == "tile5") {
@@ -318,9 +289,6 @@ function game () {
                     // Tile 28 - House Lannister
                     } else if (currentTile.id == "tile28") {
 
-                        currentTile = document.getElementById("tile24");
-                        currentTile.appendChild(token);
-
                         jumboTitle.innerHTML = "House Lannister";
                         jumboText.innerHTML =  "Oh no! You have been spotted by Lannister.<br>They have imprisoned you and raised the alarm<br><br><i>Loose a turn</i>"
                         jumboImg.src = "images/GameMap/house_lannister.png";
@@ -330,11 +298,43 @@ function game () {
                         button.style.backgroundColor = "#C20C0C";
                         button.textContent = "Loose a turn";
                         ++counter
-                    }
+                    
+                    } 
+                    
+                     }, 500)
+                    
+                 
+                if(playerScore >= 30 && counter <= 8) {
+                    
+                    token.remove();
+                    saveStorage(playerScore * roll / counter * 10);
+                    window.location.href = "winner.html";
+                    
+                }
+                 
+                  // defeat
+                if(counter >= 20) {
 
-                }, 1000)
+                    setTimeout(function () {
+                    jumboTitle.innerHTML = "Defeat";
+                    jumboText.innerHTML = "This is a sad day. Cersei Lannister has been given the crown, and now rules the 7 kingdoms";
+                    jumboImg.src = "images/jumbo/knight_defeat.jpg";
+                    jumboImg.alt = "defeated knight";
+                    jumbo.style.display = "flex";
+                    jumbo.style.zIndex = 10;
+                    button.textContent = "Try Again";
+                    button.style.backgroundColor = "#C20C0C";
+                    diceCount = 0;
+                    button.addEventListener("click", function() {
+
+                        window.location.href = "index.html";
+                    })
+
+                    }, 600)
+                };
 
 
+                 currentTile.appendChild(token);
                 // dice roll
                 var diceNr = document.getElementById("diceNr");
 
@@ -414,6 +414,14 @@ document.getElementById("backBtn").addEventListener("click", function(){
     window.location.href = "index.html"
 });
 
+//Save to Local Storage
+function saveStorage(playerScore) {
+    
+localStorage.setItem("playerScore", playerScore);
+                
+};
+
+                    
 
 
 

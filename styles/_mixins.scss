@@ -196,7 +196,7 @@
              margin: 0;
              padding: 0;
         }
- 
+        
         .btnPlay {
 
             font-size: 24px;
@@ -206,6 +206,12 @@
             margin: 0 auto;
             display: inline-block;
 
+        }
+        
+        .playerScore {
+            
+            width: 40%;
+            text-align: center;
         }
         
         .header__logo {
@@ -225,6 +231,7 @@
             margin: 10px;
             width: 200px;
             height: 65vh;
+            font-weight: 400;
         }
         
         .card-text:first-line {
@@ -236,6 +243,27 @@
             
             margin-left: 5px;
             margin-bottom: 50px;
+        }
+        
+        .playerScore {
+            
+            align-self: center;
+            margin-top: 150px;
+            width: 20%;
+        }
+        
+        .tokenImg {
+    
+            width: 250px;
+            height: 250px;
+            align-self: center;
+            margin-top: 50px;
+    
+        }
+        
+        #scoreBtn {
+            
+             margin-top: 150px;
         }
         
         .btnPlay {
