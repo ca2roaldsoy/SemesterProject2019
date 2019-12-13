@@ -64,7 +64,7 @@ main {
 .card {
   padding: 30px;
   margin: 25px 50px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -430,6 +430,7 @@ input[type=radio]:checked + .glow {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 /************ Winner Page ***************/
 #winner {
   background-image: url(../images/Background/flame_backgr_2.jpg);

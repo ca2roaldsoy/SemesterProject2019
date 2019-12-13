@@ -176,6 +176,7 @@ function game () {
                         if (element.id === "token") {
                             element.remove();
                         }
+                 
                     });
                 })
 
@@ -183,6 +184,8 @@ function game () {
                 var currentTile = document.getElementById("tile" + playerScore);
                 console.log(playerScore);
                  
+                currentTile.appendChild(token);
+                
                 // move token x spaces
                 setTimeout(function() {
 
@@ -302,11 +305,9 @@ function game () {
                     } 
                     
                      }, 500)
-                    
                  
-                if(playerScore >= 30 && counter <= 8) {
-                    
-                    token.remove();
+                if(playerScore >= 31 && counter <= 8) {
+                            
                     saveStorage(playerScore * roll / counter * 10);
                     window.location.href = "winner.html";
                     
