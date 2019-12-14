@@ -80,6 +80,22 @@ input[type=radio]:checked + .glow {
         }   
 }
 
+
+.tileGlow {
+    
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px $orange;
+    animation: tileGlow 1.5s linear infinite alternate;
+            
+        @keyframes tileGlow {
+                
+            to {
+                    
+                box-shadow: 0px 0px 0px 0px $red;
+            }
+        }   
+}
+
 .tokens {
     
     background-color: rgba(255, 255, 255, 0.5);
@@ -116,9 +132,9 @@ input[type=radio]:checked + .glow {
     font-size: 18px;
     top: 350px;
     position: relative;
-    left: 100px;
+    left: 50px;
     background-image: url(../images/Icons/arrow_icon_backw.png);
-    background-position: 0px 10px;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: rgba(0,0,0,0);
@@ -127,13 +143,14 @@ input[type=radio]:checked + .glow {
         &:hover {
 
             background-color: rgba(0,0,0,0);
-            animation: backgrpos .5s linear infinite alternate;
+            color: $brown;
+            animation: backArrow .5s linear infinite alternate;
             
-            @keyframes backgrpos {
+            @keyframes backArrow {
         
             to {
                     
-                background-position: 0px 20px;
+               background-position: 0 20px;
             }
         }   
     }
@@ -233,9 +250,10 @@ input[type=radio]:checked + .glow {
     z-index: 5;
     text-align: center;
     display: none;
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgba(255, 31, 31, 0.8);
     margin: 0 auto;
     margin-top: 50px;
+    border-radius: 50%;
 }
 
 .goal {

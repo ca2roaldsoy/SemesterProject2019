@@ -80,9 +80,9 @@ function boardGame () {
     
         } 
 
-         if(tile.id === "tile29") {
+         if(tile.id === "tile28") {
 
-            tileId.innerHTML += "Move back 5 spaces";
+            tileId.innerHTML += "Move back 4 spaces";
             tileId.style.transform = r+180;
         } 
 
@@ -132,7 +132,6 @@ function game () {
     jumboImg.style.width = "300px";
     button.style.backgroundColor = "#748F00";
     button.textContent = "Play Game";
-    diceRoll.className = "glow";
     jumboText.style.maxWidth = "1000px";
 
 
@@ -175,6 +174,11 @@ function game () {
                         // if token is inside, remove it
                         if (element.id === "token") {
                             element.remove();
+                            token.classList.remove("tileGlow");
+                            
+                        } else {
+                            
+                            token.classList.add("tileGlow");
                         }
                  
                     });
@@ -182,18 +186,19 @@ function game () {
 
                 // append the token to the tile
                 var currentTile = document.getElementById("tile" + playerScore);
-                console.log(playerScore);
                  
-                 if(playerScore >= tiles.length && counter < 8) {
+                 if(playerScore >= tiles.length-1 && counter < 9) {
                     
                     thisTile.appendChild(token);
                     diceCount = 0;
-                    saveStorage(Math.round(playerScore * roll / counter * 10));
+                    saveStorage(Math.round(playerScore));// * roll / counter * 10));
                     window.location.href = "winner.html";
                     
                 }
                  
                 currentTile.appendChild(token);
+                 
+                 console.log(playerScore);
                 
                 // move token x spaces
                 setTimeout(function() {
@@ -225,14 +230,13 @@ function game () {
                          jumboImg.style.width = "720px";
                          button.style.backgroundColor = "#748F00";
                          button.textContent = "Get an EXTRA turn"
-                         --counter;
-
+              
                      // Tile 29 - Move back 5 spaces 
-                     } else if (currentTile.id == "tile29") {
+                     } else if (currentTile.id == "tile28") {
 
-                         currentTile = document.getElementById("tile24");
+                         currentTile = document.getElementById("tile25");
                          currentTile.appendChild(token);
-                         playerScore -= 5;
+                         playerScore -= 4;
 
                          jumboTitle.innerHTML = "Watch out Cersei Lannister is on to you";
                          jumboText.innerHTML =  "Cersei Lannister has sensed your coming. She has taken her guards out to search for you. <br><br> Hurry " + getLocal + " Retreat back to safety";
@@ -284,10 +288,11 @@ function game () {
                         --counter
 
                     // Tile 25 - House Targaryen
-                    } else if (currentTile.id == "tile25") {
+                    } else if (currentTile.id == "tile24") {
 
-                        currentTile = document.getElementById("tile27");
+                        currentTile = document.getElementById("tile26");
                         currentTile.appendChild(token);
+                        playerScore += 2;
 
                         jumboTitle.innerHTML = "House Targaryen";
                         jumboText.innerHTML =  "Welcome to House Targaryen, " + getLocal + ".<br>Fly on a dragon on your quest. They will help you move quickly<br><br><i>Move 2 spaces forward</i>"
@@ -299,7 +304,7 @@ function game () {
                         button.textContent = "Move forward 2 spaces";
 
                     // Tile 28 - House Lannister
-                    } else if (currentTile.id == "tile28") {
+                    } else if (currentTile.id == "tile27") {
 
                         jumboTitle.innerHTML = "House Lannister";
                         jumboText.innerHTML =  "Oh no! You have been spotted by Lannister.<br>They have imprisoned you and raised the alarm<br><br><i>Loose a turn</i>"
@@ -316,7 +321,7 @@ function game () {
                      }, 500)
                  
                   // defeat
-                if(counter >= 8) {
+                if(playerScore < tiles.length && counter >= 8) {
 
                     setTimeout(function () {
                     jumboTitle.innerHTML = "Defeat";

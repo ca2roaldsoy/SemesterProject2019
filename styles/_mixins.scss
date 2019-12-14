@@ -7,11 +7,13 @@
     background-size: cover;
 }
 
-@mixin tokenImg () {
+@mixin tokenImg ($marginTop: 0px) {
     
-    background-size: 200px 200px;
+    background-size: 175px 175px;
     background-repeat: no-repeat;
-    background-position: center;  
+    background-position: center;
+    margin-top: $marginTop;
+    margin-left: -5px;
 }
 
 @mixin characterToken () {
@@ -19,49 +21,49 @@
     .arya-stark {
         
         background-image: $arya_stark;
-        @include tokenImg();
+        @include tokenImg(-10px);
     }
     
     .sansa-stark {
         
         background-image: $sansa_stark;
-        @include tokenImg();
+        @include tokenImg(-10px);
     }
     
     .eddard-stark {
         
         background-image: $eddard_stark;
-        @include tokenImg();
+        @include tokenImg(-10px);
     }
     
     .jon-snow {
         
         background-image: $jon_snow;
-        @include tokenImg();
+        @include tokenImg(-10px);
     }
     
     .jaime-lannister {
         
         background-image: $jaime_lannister;
-        @include tokenImg();
+        @include tokenImg(-10px);
     }
     
     .tyrion-lannister {
         
         background-image: $tyrion_lannister;
-        @include tokenImg();
+        @include tokenImg(-10px);
     }
     
     .joffrey-baratheon {
         
         background-image: $joffrey_bara;
-        @include tokenImg();
+        @include tokenImg(-10px);
     }
     
     .robert-baratheon {
         
         background-image: $robert_bara;
-        @include tokenImg();
+        @include tokenImg(-10px);
     }
     
     .daenerys-targaryen{
@@ -109,7 +111,7 @@
         background-color: $green;
     }
     
-    #tile11, #tile29 {
+    #tile11, #tile28 {
         
         background: none;
         border: none;
@@ -138,14 +140,14 @@
         border: none;
     }
     
-     #tile25 {
+     #tile24 {
         
         background-color: rgba(0, 0, 0, 0);
         background-image: $targaryen;
         border: none;
     }
     
-     #tile28 {
+     #tile27 {
         
         background-color: rgba(0, 0, 0, 0);
         background-image: $lannister;
