@@ -184,6 +184,15 @@ function game () {
                 var currentTile = document.getElementById("tile" + playerScore);
                 console.log(playerScore);
                  
+                 if(playerScore >= tiles.length && counter < 8) {
+                    
+                    thisTile.appendChild(token);
+                    diceCount = 0;
+                    saveStorage(Math.round(playerScore * roll / counter * 10));
+                    window.location.href = "winner.html";
+                    
+                }
+                 
                 currentTile.appendChild(token);
                 
                 // move token x spaces
@@ -306,15 +315,8 @@ function game () {
                     
                      }, 500)
                  
-                if(playerScore >= 31 && counter <= 8) {
-                            
-                    saveStorage(playerScore * roll / counter * 10);
-                    window.location.href = "winner.html";
-                    
-                }
-                 
                   // defeat
-                if(counter >= 20) {
+                if(counter >= 8) {
 
                     setTimeout(function () {
                     jumboTitle.innerHTML = "Defeat";
