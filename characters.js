@@ -57,7 +57,6 @@ fetch(api)
 .then ((res) => { 
     
     (res)
-    console.log(res);
     
     var charInfo = document.getElementById("banner");
    

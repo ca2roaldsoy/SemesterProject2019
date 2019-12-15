@@ -6,12 +6,8 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "RiseofKingdom";
-  src: url("../fonts/vladimir-nikolic_rise-of-kingdom/Rise of Kingdom.ttf");
-}
 #select_character {
-  font-family: "dutch-mediaeval-pro", "RiseofKingdom", serif;
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
 }
 
 h2 {
@@ -64,7 +60,7 @@ main {
 .card-title {
   margin-bottom: 20px;
   font-size: 7vw;
-  font-family: "dutch-mediaeval-pro", "RiseofKingdom", serif;
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
 }
 
 .card {
@@ -163,7 +159,7 @@ input[type=radio]:checked + .glow {
 #gameBoard .box {
   background-color: rgba(0, 0, 0, 0.9);
   border: 3px solid #ffffff;
-  font-family: "dutch-mediaeval-pro", "RiseofKingdom", serif;
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
   font-weight: 400;
   background-position: center;
   background-repeat: no-repeat;
@@ -239,7 +235,7 @@ input[type=radio]:checked + .glow {
   margin: auto;
   top: 450px;
   left: 165px;
-  font-family: "dutch-mediaeval-pro", "RiseofKingdom", serif;
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
 }
 
 #dice img {

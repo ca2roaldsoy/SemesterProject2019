@@ -137,7 +137,7 @@ function game () {
     
     window.onload = setTimeout(function () {    
     jumboTitle.innerHTML = "Play Game";
-    jumboText.innerHTML = "Cersei Lannister is about to take the crown and rule the seven kingdoms! <br> We recon you got <strong>8</strong> turns to get the crown before her. Be aware as she watches out for everyone. It is up to you now, " + getLocal + ".<br><br> Please be sure to visit the houses, you might get lucky.<br><br> If you role <strong>6</strong>, you get an extra turn! Start by rolling the dice.<br><br><i>When you are ready press 'Play Game'.";
+    jumboText.innerHTML = "<p>Cersei Lannister is about to take the crown and rule the seven kingdoms!</p><p> We recon you got <strong>8</strong> turns to get the crown before her.</p><p>Be aware as she watches out for everyone. It is up to you now, " + getLocal + ".</p><p>Please be sure to visit the houses, you might get lucky.</p> <p> If you role <strong>6</strong>, you get an extra turn! Start by rolling the dice.</p> <p><i>When you are ready press 'Play Game'.</p>";
     jumboImg.src = "images/Logo/swordLogo.png";
     jumboImg.alt = "Two swords crossing a crown";
     button.textContent = "Play Game";
@@ -221,7 +221,7 @@ function game () {
                          playerScore -= 3;
 
                          jumboTitle.innerHTML = "You are under attack";
-                         jumboText.innerHTML = "Cersei Lannister has sent her evil minions to stop you from moving forward. <br> You are outnumbered <br><br> Retreat, Retreat, Retreat";
+                         jumboText.innerHTML = "<p>Cersei Lannister has sent her evil minions to stop you from moving forward.</p><p>You are outnumbered </p><p> Retreat, Retreat, Retreat</p>";
                          jumboImg.src = "images/jumbo/minions.jpg";
                          jumboImg.alt = "Woman sending birds to a castle";
                          button.textContent = "Move back 3 spaces";
@@ -232,7 +232,7 @@ function game () {
                      } else if (currentTile.id == "tile15") {
 
                          jumboTitle.innerHTML = "Help from an ally";
-                         jumboText.innerHTML = "Hodor has come to aid you on your mission. He will hold the door so the enemies can't reach you! <br><br> Get an extra turn";
+                         jumboText.innerHTML = "<p>Hodor has come to aid you on your mission. He will hold the door so the enemies can't reach you!</p> <p> Get an extra turn</p>";
                          jumboImg.src = "images/jumbo/aid.jpg";
                          jumboImg.alt = "Knight in armour";
                          button.textContent = "Get an EXTRA turn"
@@ -247,7 +247,7 @@ function game () {
                          playerScore -= 4;
 
                          jumboTitle.innerHTML = "Watch out Cersei Lannister is on to you";
-                         jumboText.innerHTML =  "Cersei Lannister has sensed your coming. She has taken her guards out to search for you. <br><br> Hurry, " + getLocal + ", retreat back to safety";
+                         jumboText.innerHTML =  "<p>Cersei Lannister has sensed your coming. She has taken her guards out to search for you.</p><p> Hurry, " + getLocal + ", retreat back to safety";
                          jumboImg.src = "images/jumbo/guards.jpg";
                          jumboImg.alt = "Battle cavalry";
                          button.textContent = "Move back 5 spaces";
@@ -258,7 +258,7 @@ function game () {
                      } else if (currentTile.id == "tile5") {
 
                         jumboTitle.innerHTML = "House Baratheon";
-                        jumboText.innerHTML =  "Welcome to House Baratheon, " + getLocal + ". Come and join us for a meal! <br><br><i>Stay over a turn</i>"
+                        jumboText.innerHTML =  "<p>Welcome to House Baratheon, " + getLocal + ". Come and join us for a meal!</p><p><i>Stay over a turn</i></p>"
                         jumboImg.src = "images/GameMap/house_baratheon.png";
                         jumboImg.alt = "House Baratheon";
                         button.textContent = "Loose a turn"; 
@@ -270,7 +270,7 @@ function game () {
                      } else if (currentTile.id == "tile7") {
 
                         jumboTitle.innerHTML = "House Greyjoy";
-                        jumboText.innerHTML =  "Welcome to House Greyjoy, " + getLocal + ". <br> We are wishing you welcome, and provide you with a horse on your journey. <br><br><i>Get an extra turn</i>"
+                        jumboText.innerHTML =  "<p>Welcome to House Greyjoy, " + getLocal + ". </p><p> We are wishing you welcome, and provide you with a horse on your journey.</p> <p><i>Get an extra turn</i></p>"
                         jumboImg.src = "images/GameMap/house_greyjoy.png";
                         jumboImg.alt = "House Greyjoy";
                         button.textContent = "Get an EXTRA turn";
@@ -282,7 +282,7 @@ function game () {
                     } else if (currentTile.id == "tile20") {
 
                         jumboTitle.innerHTML = "House Stark";
-                        jumboText.innerHTML =  "Welcome to House Stark, " + getLocal + ".<br>You get help from the 3 eyed raven, to watch for enemies.<br><br><i>Get an extra turn</i>"
+                        jumboText.innerHTML =  "<p>Welcome to House Stark, " + getLocal + ".</p><p>You get help from the 3 eyed raven, to watch for enemies.</p><p><i>Get an extra turn</i></p>"
                         jumboImg.src = "images/GameMap/house_stark.png";
                         jumboImg.alt = "House Stark";
                         button.textContent = "Get an EXTRA turn";
@@ -298,7 +298,7 @@ function game () {
                         playerScore += 2;
 
                         jumboTitle.innerHTML = "House Targaryen";
-                        jumboText.innerHTML =  "Welcome to House Targaryen, " + getLocal + ".<br>Fly on a dragon on your quest. They will help you move quickly<br><br><i>Move 2 spaces forward</i>"
+                        jumboText.innerHTML =  "<p>Welcome to House Targaryen, " + getLocal + ".</p><p>Fly on a dragon on your quest. They will help you move quickly<p></p><i>Move 2 spaces forward</i>"
                         jumboImg.src = "images/GameMap/house_targaryen.png";
                         jumboImg.alt = "House Targaryen";
                         button.textContent = "Move forward 2 spaces";
@@ -309,7 +309,7 @@ function game () {
                     } else if (currentTile.id == "tile27") {
 
                         jumboTitle.innerHTML = "House Lannister";
-                        jumboText.innerHTML =  "Oh no! You have been spotted by a Lannister.<br>They have imprisoned you and raised the alarm<br><br><i>Loose a turn</i>"
+                        jumboText.innerHTML =  "<p>Oh no! You have been spotted by a Lannister.</p><p>They have imprisoned you and raised the alarm<br><i>Loose a turn</i><p>"
                         jumboImg.src = "images/GameMap/house_lannister.png";
                         jumboImg.alt = "House Lannister";
                         button.textContent = "Loose a turn";
@@ -327,7 +327,7 @@ function game () {
 
                     setTimeout(function () {
                     jumboTitle.innerHTML = "Defeat";
-                    jumboText.innerHTML = "This is a sad day. Cersei Lannister has taken the crown,<br> and now rules the 7 kingdoms";
+                    jumboText.innerHTML = "<p>This is a sad day. Cersei Lannister has taken the crown,<br> and now rules the 7 kingdoms";
                     jumboImg.src = "images/jumbo/knight_defeat.jpg";
                     jumboImg.alt = "defeated knight";
                     jumbo.style.display = "flex";
@@ -352,7 +352,15 @@ function game () {
                          diceNr.src = "images/Dice/1x/" + dices[i];
                         clearInterval(interval);
                      }
+                     
+                    
                  }
+                 
+                 // get extra turn if rolling 6
+                 if(roll === 6) {
+                         
+                    --counter 
+                }
                 
                   diceRoll.style.display = "block";
 
