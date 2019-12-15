@@ -6,8 +6,12 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "RiseofKingdom";
+  src: url("../fonts/vladimir-nikolic_rise-of-kingdom/Rise of Kingdom.ttf");
+}
 #select_character {
-  font-family: "dutch-mediaeval-pro", serif;
+  font-family: "dutch-mediaeval-pro", "RiseofKingdom", serif;
 }
 
 h2 {
@@ -29,7 +33,7 @@ main {
   font-family: Open Sans;
 }
 
-/************ Character Tokens ***************/
+/***************************    Characters Token  ***************************/
 #select_character {
   background-image: url(../images/Background/index_backgrImg.jpg);
   background-position: center;
@@ -56,9 +60,11 @@ main {
   }
 }
 
+/***************************    Cards  ***************************/
 .card-title {
   margin-bottom: 20px;
   font-size: 7vw;
+  font-family: "dutch-mediaeval-pro", "RiseofKingdom", serif;
 }
 
 .card {
@@ -72,6 +78,7 @@ main {
   border-radius: 5px;
   font-size: 4vw;
   color: #ffffff;
+  font-family: "Open Sans", "Verdana", sans-serif;
 }
 
 .card-text:first-line {
@@ -96,17 +103,6 @@ input[type=radio]:checked + .glow {
   }
 }
 
-.tileGlow {
-  border-radius: 50%;
-  box-shadow: 0px 0px 5px 5px #C4450A;
-  animation: tileGlow 1.5s linear infinite alternate;
-}
-@keyframes tileGlow {
-  to {
-    box-shadow: 0px 0px 0px 0px #C20C0C;
-  }
-}
-
 .tokens {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -115,7 +111,7 @@ input[type=radio]:checked + .glow {
 .btnPlay {
   position: fixed;
   bottom: 0;
-  left: 35%;
+  left: 30%;
   z-index: 2;
   display: block;
   width: 40vw;
@@ -156,7 +152,7 @@ input[type=radio]:checked + .glow {
   }
 }
 
-/************ Game Board ***************/
+/***************************    Game Board  ***************************/
 #gameBoard {
   background-image: url(../images/Background/board_backgrImg_v2.png);
   background-attachment: fixed;
@@ -167,7 +163,7 @@ input[type=radio]:checked + .glow {
 #gameBoard .box {
   background-color: rgba(0, 0, 0, 0.9);
   border: 3px solid #ffffff;
-  font-family: "dutch-mediaeval-pro", serif;
+  font-family: "dutch-mediaeval-pro", "RiseofKingdom", serif;
   font-weight: 400;
   background-position: center;
   background-repeat: no-repeat;
@@ -243,7 +239,7 @@ input[type=radio]:checked + .glow {
   margin: auto;
   top: 450px;
   left: 165px;
-  font-family: "dutch-mediaeval-pro", serif;
+  font-family: "dutch-mediaeval-pro", "RiseofKingdom", serif;
 }
 
 #dice img {
@@ -299,7 +295,7 @@ input[type=radio]:checked + .glow {
   background-color: rgba(255, 31, 31, 0.8);
   margin: 0 auto;
   margin-top: 50px;
-  border-radius: 50%;
+  border-radius: 50px;
 }
 
 .goal {
@@ -330,6 +326,19 @@ input[type=radio]:checked + .glow {
   right: 10px;
 }
 
+/******* Display Character Position ********/
+.tileGlow {
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 5px #C4450A;
+  animation: tileGlow 1.5s linear infinite alternate;
+}
+@keyframes tileGlow {
+  to {
+    box-shadow: 0px 0px 0px 0px #C20C0C;
+  }
+}
+
+/****** Jumbotrone ******/
 .jumbo {
   display: none;
 }
@@ -374,6 +383,7 @@ input[type=radio]:checked + .glow {
   font-size: 18px;
 }
 
+/***************************    Player tokens on game board  ***************************/
 .arya-stark {
   background-image: url(../images/Tokens/arya_stark_token.png);
   background-size: 175px 175px;
@@ -411,7 +421,7 @@ input[type=radio]:checked + .glow {
 }
 
 .jaime-lannister {
-  background-image: url(../images/Tokens/jamie_lannister_token.png);
+  background-image: url(../images/Tokens/jaime_lannister_token.png);
   background-size: 175px 175px;
   background-repeat: no-repeat;
   background-position: center;
@@ -521,6 +531,7 @@ input[type=radio]:checked + .glow {
   display: block;
 }
 
+/***************************    Media Queris  ***************************/
 /******************** Screen 768 px ******************/
 @media only screen and (min-width: 768px) {
   .card {
@@ -529,6 +540,7 @@ input[type=radio]:checked + .glow {
     width: 200px;
     height: 65vh;
     font-size: 16px;
+    margin-left: 20px;
   }
 
   .card-title {
@@ -573,14 +585,15 @@ input[type=radio]:checked + .glow {
     width: 200px;
     height: 65vh;
     font-weight: 400;
+    font-size: 14px;
   }
 
   .card-text:first-line {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #banner {
-    margin-left: 5px;
+    margin-left: 20px;
     margin-bottom: 50px;
   }
 
@@ -612,7 +625,7 @@ input[type=radio]:checked + .glow {
     background-size: 150px 30px;
     background-color: rgba(0, 0, 0, 0.9);
     display: inline-block;
-    padding-top: 40px;
+    padding-top: 35px;
   }
   .btnPlay:hover {
     background-color: rgba(0, 0, 0, 0.9);

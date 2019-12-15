@@ -1,4 +1,5 @@
-// Character Select
+/***************************    Selecting Character  ***************************/
+
 var allTokens = document.querySelectorAll(".characters__token--img");
 var selected = document.querySelector("input[name='token']:checked"); 
 var chInfo = document.getElementById("banner");
@@ -38,13 +39,14 @@ function removeStorage(player) {
     localStorage.setItem("player", player);
 };
 
+//Get to next page
 var playBtn = document.getElementById("playBtn");
 playBtn.addEventListener("click", function(){
     
     window.location.href = "board.html"
 });
 
-
+/***************************    Get Characters Api  ***************************/
 counter = 0;
 
 function apiReq (ids){

@@ -1,5 +1,6 @@
 @import "variables"; 
 
+//Background Images
 @mixin backgrImg () {
     
     background-position: center;
@@ -7,6 +8,8 @@
     background-size: cover;
 }
 
+
+//Token Image on Board
 @mixin tokenImg ($marginTop: 0px) {
     
     background-size: 175px 175px;
@@ -79,6 +82,7 @@
     }
 }
 
+//Game Board
 @mixin gameBoard () {
     
     .box {
@@ -179,6 +183,7 @@
             width: 200px;
             height: 65vh;
             font-size: 16px;
+            margin-left: 20px;
         }
         
         .card-title {
@@ -234,16 +239,17 @@
             width: 200px;
             height: 65vh;
             font-weight: 400;
+            font-size: 14px;
         }
         
         .card-text:first-line {
             
-            font-size: 18px;
+            font-size: 16px;
         }
         
         #banner {
             
-            margin-left: 5px;
+            margin-left: 20px;
             margin-bottom: 50px;
         }
         
@@ -280,7 +286,7 @@
             background-size: 150px 30px;
             background-color: rgba(0,0,0,0.9);
             display: inline-block;
-            padding-top: 40px;
+            padding-top: 35px;
 
              &:hover {
 

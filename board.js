@@ -1,4 +1,4 @@
-//get local storage
+/***************************    Get Local Storage  ***************************/
 
 var playerName = document.querySelector(".playerName");
 var getLocal;
@@ -12,6 +12,7 @@ function getStorage(arg1) {
 
 getStorage("player");
 
+/***************************    Construct The Board  ***************************/
 var tiles = 31;
 var board = document.getElementById("board");
 var centerW = window.innerWidth / 2-30 + "px";
@@ -36,7 +37,7 @@ jumboText.style.minWidth = "400px";
 jumboText.style.paddingLeft = "65px";
 button.style.width = "15%";
 
-// constructing board game
+
 function boardGame () {
 
     for (var i = 0; i < tiles; ++i) {
@@ -46,7 +47,7 @@ function boardGame () {
         
         //create tiles in a circle
         var radius = 360 * i / tiles;
-        var rotate = 'translate(' + centerW + ',' + centerH + ') rotate(' + radius + 'deg) translate(0px, -400px)';
+        var rotate = 'translate(' + centerW + ',' + centerH + ') rotate(' + radius + 'deg) translate(0px, -21vw)';
 
         tileId.style.padding = "10px";
         tileId.classList = "tile";
@@ -97,6 +98,16 @@ function boardGame () {
 
 boardGame();
 
+function gameJumbo(size, btnColor) {
+    
+    jumbo.style.display = "flex";
+    jumboImg.style.width = size;
+    button.style.backgroundColor = btnColor;
+ 
+}
+
+/***************************    Add Token to Board  ***************************/
+
 var counter = 0;
 var playerScore = 0;
 
@@ -122,22 +133,22 @@ function game () {
     var sum = document.querySelector(".sum");
     var diceCount = 0;
 
-    // Start the Game
+    /***************************    Start the Game  ***************************/
+    
     window.onload = setTimeout(function () {    
     jumboTitle.innerHTML = "Play Game";
     jumboText.innerHTML = "Cersei Lannister is about to take the crown and rule the seven kingdoms! <br> We recon you got <strong>8</strong> turns to get the crown before here. Be aware as she watches for everyone. It is up to you " + getLocal + ", to take the crown before here.<br><br> Please be sure to visit the houses, you might be lucky.<br><br> If you role <strong>6</strong>, you get an extra turn! Start by rolling the dice<br><i>When you are ready press 'Play Game'";
     jumboImg.src = "images/Logo/swordLogo.png";
     jumboImg.alt = "Two swords crossing a crown";
-    jumbo.style.display = "flex";
-    jumboImg.style.width = "300px";
-    button.style.backgroundColor = "#748F00";
     button.textContent = "Play Game";
     jumboText.style.maxWidth = "1000px";
+    
+    gameJumbo("300px", "#748F00")
 
 
     }, 1000)
 
-    // Roll the dice    
+    /***************************    Roll the Dice  ***************************/    
     diceRoll.addEventListener("click", function(){
 
         function initDices () {
@@ -187,20 +198,19 @@ function game () {
                 // append the token to the tile
                 var currentTile = document.getElementById("tile" + playerScore);
                  
+                 //victory
                  if(playerScore >= tiles.length-1 && counter < 9) {
                     
                     thisTile.appendChild(token);
                     diceCount = 0;
-                    saveStorage(Math.round(playerScore));// * roll / counter * 10));
+                    saveStorage(Math.round(playerScore * roll / counter * 10));
                     window.location.href = "winner.html";
                     
                 }
                  
                 currentTile.appendChild(token);
-                 
-                 console.log(playerScore);
                 
-                // move token x spaces
+                /***************************    Move token x spaces  ***************************/
                 setTimeout(function() {
 
                      // Tile 11 - Move back 3 spaces
@@ -214,22 +224,20 @@ function game () {
                          jumboText.innerHTML = "Cersei Lannister has sent her evil minions to stop you for moving forward. <br> You are outnumbered <br><br> Retreat, Retreat, Retreat";
                          jumboImg.src = "images/jumbo/minions.jpg";
                          jumboImg.alt = "Woman sending birds to a castle";
-                         jumbo.style.display = "flex";
-                         jumboImg.style.width = "720px";
-                         button.style.backgroundColor = "#C20C0C";
                          button.textContent = "Move back 3 spaces";
+                         
+                         gameJumbo("720px", "#C20C0C")
 
                      // Tile 15 - Extra Turn        
                      } else if (currentTile.id == "tile15") {
 
                          jumboTitle.innerHTML = "Help from an ally";
-                         jumboText.innerHTML = "Hodor has come to your aid you on your mission. He will hold the door so the enemies can't reach you! <br> Get an extra turn";
+                         jumboText.innerHTML = "Hodor has come to your aid you on your mission. He will hold the door so the enemies can't reach you! <br><br> Get an extra turn";
                          jumboImg.src = "images/jumbo/aid.jpg";
                          jumboImg.alt = "Knight in armour";
-                         jumbo.style.display = "flex";
-                         jumboImg.style.width = "720px";
-                         button.style.backgroundColor = "#748F00";
                          button.textContent = "Get an EXTRA turn"
+                         
+                         gameJumbo("720px", "#748F00")
               
                      // Tile 29 - Move back 5 spaces 
                      } else if (currentTile.id == "tile28") {
@@ -239,14 +247,12 @@ function game () {
                          playerScore -= 4;
 
                          jumboTitle.innerHTML = "Watch out Cersei Lannister is on to you";
-                         jumboText.innerHTML =  "Cersei Lannister has sensed your coming. She has taken her guards out to search for you. <br><br> Hurry " + getLocal + " Retreat back to safety";
+                         jumboText.innerHTML =  "Cersei Lannister has sensed your coming. She has taken her guards out to search for you. <br><br> Hurry " + getLocal + ", retreat back to safety";
                          jumboImg.src = "images/jumbo/guards.jpg";
                          jumboImg.alt = "Battle cavalry";
-                         jumbo.style.display = "flex";
-                         jumboImg.style.width = "720px";
-                         button.style.backgroundColor = "#C20C0C";
                          button.textContent = "Move back 5 spaces";
                          
+                         gameJumbo("720px", "#C20C0C")
 
                      // Tile 5 - House Baratheon
                      } else if (currentTile.id == "tile5") {
@@ -255,10 +261,9 @@ function game () {
                         jumboText.innerHTML =  "Welcome to House Baratheon, " + getLocal + ". Come and join us for a meal! <br><br><i>Stay over a turn</i>"
                         jumboImg.src = "images/GameMap/house_baratheon.png";
                         jumboImg.alt = "House Baratheon";
-                        jumbo.style.display = "flex"; 
-                        jumboImg.style.width = "400px"; 
-                        button.style.backgroundColor = "#C20C0C";
                         button.textContent = "Loose a turn"; 
+                         
+                        gameJumbo("400px", "#C20C0C")
                         ++counter
 
                      // Tile 7 - House Greyjoy
@@ -268,23 +273,21 @@ function game () {
                         jumboText.innerHTML =  "Welcome to House Greyjoy, " + getLocal + ". <br> We are wishing you welcome, and receives you with a horse on your journey to move faster <br><br><i>Get an extra turn</i>"
                         jumboImg.src = "images/GameMap/house_greyjoy.png";
                         jumboImg.alt = "House Greyjoy";
-                        jumbo.style.display = "flex"; 
-                        jumboImg.style.width = "400px";
-                        button.style.backgroundColor = "#748F00";
-                        button.textContent = "Get an EXTRA turn"
+                        button.textContent = "Get an EXTRA turn";
+                         
+                        gameJumbo("400px", "#748F00") 
                         --counter
 
                     // Tile 20 - House Stark
                     } else if (currentTile.id == "tile20") {
 
                         jumboTitle.innerHTML = "House Stark";
-                        jumboText.innerHTML =  "Welcome to House Stark, " + getLocal + ".<br>You get help from the 3 eyed raven, to watch for enemies, and of course Hodor will hold the door<br><br><i>Get an extra turn</i>"
+                        jumboText.innerHTML =  "Welcome to House Stark, " + getLocal + ".<br>You get help from the 3 eyed raven, to watch for enemies.<br><br><i>Get an extra turn</i>"
                         jumboImg.src = "images/GameMap/house_stark.png";
                         jumboImg.alt = "House Stark";
-                        jumbo.style.display = "flex"; 
-                        jumboImg.style.width = "400px";
-                        button.style.backgroundColor = "#748F00";
                         button.textContent = "Get an EXTRA turn";
+                        
+                        gameJumbo("400px", "#748F00") 
                         --counter
 
                     // Tile 25 - House Targaryen
@@ -298,10 +301,9 @@ function game () {
                         jumboText.innerHTML =  "Welcome to House Targaryen, " + getLocal + ".<br>Fly on a dragon on your quest. They will help you move quickly<br><br><i>Move 2 spaces forward</i>"
                         jumboImg.src = "images/GameMap/house_targaryen.png";
                         jumboImg.alt = "House Targaryen";
-                        jumbo.style.display = "flex"; 
-                        jumboImg.style.width = "400px";
-                        button.style.backgroundColor = "#748F00";
                         button.textContent = "Move forward 2 spaces";
+                        
+                        gameJumbo("400px", "#748F00")
 
                     // Tile 28 - House Lannister
                     } else if (currentTile.id == "tile27") {
@@ -310,22 +312,22 @@ function game () {
                         jumboText.innerHTML =  "Oh no! You have been spotted by Lannister.<br>They have imprisoned you and raised the alarm<br><br><i>Loose a turn</i>"
                         jumboImg.src = "images/GameMap/house_lannister.png";
                         jumboImg.alt = "House Lannister";
-                        jumbo.style.display = "flex"; 
-                        jumboImg.style.width = "400px";
-                        button.style.backgroundColor = "#C20C0C";
                         button.textContent = "Loose a turn";
+                        
+                        gameJumbo("400px", "#C20C0C") 
                         ++counter
                     
                     } 
                     
                      }, 500)
                  
-                  // defeat
+                
+                // Defeat
                 if(playerScore < tiles.length && counter >= 8) {
 
                     setTimeout(function () {
                     jumboTitle.innerHTML = "Defeat";
-                    jumboText.innerHTML = "This is a sad day. Cersei Lannister has been given the crown, and now rules the 7 kingdoms";
+                    jumboText.innerHTML = "This is a sad day. Cersei Lannister has been given the crown,<br> and now rules the 7 kingdoms";
                     jumboImg.src = "images/jumbo/knight_defeat.jpg";
                     jumboImg.alt = "defeated knight";
                     jumbo.style.display = "flex";
@@ -340,49 +342,18 @@ function game () {
 
                     }, 600)
                 };
-
-
-                 currentTile.appendChild(token);
+                 
                 // dice roll
-                var diceNr = document.getElementById("diceNr");
-
-                 if(roll === 1) {
-
-                    diceNr.src = "images/Dice/1x/" + dices[0];
-                    clearInterval(interval);
-                }
-
-                if(roll === 2) {
-
-                    diceNr.src = "images/Dice/1x/" + dices[1];
-                    clearInterval(interval);
-                }
-
-                if(roll === 3) {
-
-                    diceNr.src = "images/Dice/1x/" + dices[2];
-                    clearInterval(interval);
-                }
-
-                if(roll === 4) {
-
-                    diceNr.src = "images/Dice/1x/" + dices[3];
-                    clearInterval(interval);
-                }
-
-                if(roll === 5) {
-
-                    diceNr.src = "images/Dice/1x/" + dices[4];
-                    clearInterval(interval);
-                }
-
-                 if(roll === 6) {
-
-                    diceNr.src = "images/Dice/1x/" + dices[5];
-                    --counter;
-                    clearInterval(interval);
-                }
-
+                 var diceNr = document.getElementById("diceNr");
+                 for (var i=0; i < 6; i++) {
+                     
+                     if(roll === i+1) {
+                         
+                         diceNr.src = "images/Dice/1x/" + dices[i];
+                        clearInterval(interval);
+                     }
+                 }
+                
                   diceRoll.style.display = "block";
 
                 }, 3000)
@@ -410,19 +381,19 @@ function game () {
 
 game();
 
-// close jumbotrone
+/***************************    Close Jumbotrone  ***************************/
 button.addEventListener("click", function(){
         
         jumbo.style.display = "none";
 });
 
-// back to index.html
+/***************************    Back to index page  ***************************/
 document.getElementById("backBtn").addEventListener("click", function(){
     
     window.location.href = "index.html"
 });
 
-//Save to Local Storage
+/***************************    Save to local storage  ***************************/
 function saveStorage(playerScore) {
     
 localStorage.setItem("playerScore", playerScore);

@@ -1,5 +1,6 @@
 // Fonts
-$dutch-mediaeval-pro: "dutch-mediaeval-pro", serif;
+$dutch-mediaeval-pro: "dutch-mediaeval-pro", "RiseofKingdom", serif;
+$openSans: "Open Sans", "Verdana", sans-serif; 
 
 // Colors
 $orange: #C4450A;
@@ -18,13 +19,13 @@ $stark: url(../images/sigils/Stark.png);
 $targaryen: url(../images/sigils/Targaryen.png);
 $crown: url(../images/Icons/1x/crown.png);
 
-//characterTokens
+//characterTokens to use on the game board
 $arya_stark: url(../images/Tokens/arya_stark_token.png);
 $eddard_stark: url(../images/Tokens/eddard_stark_token.png);
 $sansa_stark: url(../images/Tokens/sansa_stark_token.png);
 $jon_snow: url(../images/Tokens/jon_snow_token.png);
 $daenny_targ: url(../images/Tokens/daenerys_targaryen_token.png);
-$jaime_lannister: url(../images/Tokens/jamie_lannister_token.png);
+$jaime_lannister: url(../images/Tokens/jaime_lannister_token.png);
 $tyrion_lannister: url(../images/Tokens/tyrion_lannister_token.png);
 $joffrey_bara: url(../images/Tokens/joffrey_baratheon_token.png);
 $robert_bara: url(../images/Tokens/robert_baratheon_token.png);

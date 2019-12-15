@@ -6,12 +6,19 @@
     box-sizing: border-box;
 }
 
+// font medieval sharp
 @import url('https://fonts.googleapis.com/css?family=MedievalSharp&display=swap');
+
+@font-face {
+    
+    font-family: "RiseofKingdom";
+    src: url("../fonts/vladimir-nikolic_rise-of-kingdom/Rise of Kingdom.ttf")
+}
 
 @import "blocktags";
 @import "variables";
 @import "main";
 @import "header";
 @import "mixins";
-
+/***************************    Media Queris  ***************************/
 @include media();
