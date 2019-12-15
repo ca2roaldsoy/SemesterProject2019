@@ -137,7 +137,7 @@ function game () {
     
     window.onload = setTimeout(function () {    
     jumboTitle.innerHTML = "Play Game";
-    jumboText.innerHTML = "Cersei Lannister is about to take the crown and rule the seven kingdoms! <br> We recon you got <strong>8</strong> turns to get the crown before here. Be aware as she watches for everyone. It is up to you " + getLocal + ", to take the crown before here.<br><br> Please be sure to visit the houses, you might be lucky.<br><br> If you role <strong>6</strong>, you get an extra turn! Start by rolling the dice<br><i>When you are ready press 'Play Game'";
+    jumboText.innerHTML = "Cersei Lannister is about to take the crown and rule the seven kingdoms! <br> We recon you got <strong>8</strong> turns to get the crown before her. Be aware as she watches out for everyone. It is up to you now, " + getLocal + ".<br><br> Please be sure to visit the houses, you might get lucky.<br><br> If you role <strong>6</strong>, you get an extra turn! Start by rolling the dice.<br><br><i>When you are ready press 'Play Game'.";
     jumboImg.src = "images/Logo/swordLogo.png";
     jumboImg.alt = "Two swords crossing a crown";
     button.textContent = "Play Game";
@@ -221,7 +221,7 @@ function game () {
                          playerScore -= 3;
 
                          jumboTitle.innerHTML = "You are under attack";
-                         jumboText.innerHTML = "Cersei Lannister has sent her evil minions to stop you for moving forward. <br> You are outnumbered <br><br> Retreat, Retreat, Retreat";
+                         jumboText.innerHTML = "Cersei Lannister has sent her evil minions to stop you from moving forward. <br> You are outnumbered <br><br> Retreat, Retreat, Retreat";
                          jumboImg.src = "images/jumbo/minions.jpg";
                          jumboImg.alt = "Woman sending birds to a castle";
                          button.textContent = "Move back 3 spaces";
@@ -232,7 +232,7 @@ function game () {
                      } else if (currentTile.id == "tile15") {
 
                          jumboTitle.innerHTML = "Help from an ally";
-                         jumboText.innerHTML = "Hodor has come to your aid you on your mission. He will hold the door so the enemies can't reach you! <br><br> Get an extra turn";
+                         jumboText.innerHTML = "Hodor has come to aid you on your mission. He will hold the door so the enemies can't reach you! <br><br> Get an extra turn";
                          jumboImg.src = "images/jumbo/aid.jpg";
                          jumboImg.alt = "Knight in armour";
                          button.textContent = "Get an EXTRA turn"
@@ -247,7 +247,7 @@ function game () {
                          playerScore -= 4;
 
                          jumboTitle.innerHTML = "Watch out Cersei Lannister is on to you";
-                         jumboText.innerHTML =  "Cersei Lannister has sensed your coming. She has taken her guards out to search for you. <br><br> Hurry " + getLocal + ", retreat back to safety";
+                         jumboText.innerHTML =  "Cersei Lannister has sensed your coming. She has taken her guards out to search for you. <br><br> Hurry, " + getLocal + ", retreat back to safety";
                          jumboImg.src = "images/jumbo/guards.jpg";
                          jumboImg.alt = "Battle cavalry";
                          button.textContent = "Move back 5 spaces";
@@ -270,7 +270,7 @@ function game () {
                      } else if (currentTile.id == "tile7") {
 
                         jumboTitle.innerHTML = "House Greyjoy";
-                        jumboText.innerHTML =  "Welcome to House Greyjoy, " + getLocal + ". <br> We are wishing you welcome, and receives you with a horse on your journey to move faster <br><br><i>Get an extra turn</i>"
+                        jumboText.innerHTML =  "Welcome to House Greyjoy, " + getLocal + ". <br> We are wishing you welcome, and provide you with a horse on your journey. <br><br><i>Get an extra turn</i>"
                         jumboImg.src = "images/GameMap/house_greyjoy.png";
                         jumboImg.alt = "House Greyjoy";
                         button.textContent = "Get an EXTRA turn";
@@ -309,7 +309,7 @@ function game () {
                     } else if (currentTile.id == "tile27") {
 
                         jumboTitle.innerHTML = "House Lannister";
-                        jumboText.innerHTML =  "Oh no! You have been spotted by Lannister.<br>They have imprisoned you and raised the alarm<br><br><i>Loose a turn</i>"
+                        jumboText.innerHTML =  "Oh no! You have been spotted by a Lannister.<br>They have imprisoned you and raised the alarm<br><br><i>Loose a turn</i>"
                         jumboImg.src = "images/GameMap/house_lannister.png";
                         jumboImg.alt = "House Lannister";
                         button.textContent = "Loose a turn";
@@ -327,7 +327,7 @@ function game () {
 
                     setTimeout(function () {
                     jumboTitle.innerHTML = "Defeat";
-                    jumboText.innerHTML = "This is a sad day. Cersei Lannister has been given the crown,<br> and now rules the 7 kingdoms";
+                    jumboText.innerHTML = "This is a sad day. Cersei Lannister has taken the crown,<br> and now rules the 7 kingdoms";
                     jumboImg.src = "images/jumbo/knight_defeat.jpg";
                     jumboImg.alt = "defeated knight";
                     jumbo.style.display = "flex";
