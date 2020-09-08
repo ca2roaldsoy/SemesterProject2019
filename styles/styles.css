@@ -57,12 +57,6 @@ main {
 }
 
 /***************************    Cards  ***************************/
-.card-title {
-  margin-bottom: 20px;
-  font-size: 7vw;
-  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
-}
-
 .card {
   padding: 30px;
   margin: 25px 50px;
@@ -75,6 +69,12 @@ main {
   font-size: 4vw;
   color: #ffffff;
   font-family: "Open Sans", "Verdana", sans-serif;
+  overflow: scroll;
+}
+.card-title {
+  margin-bottom: 20px;
+  font-size: 7vw;
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
 }
 
 .card-text:first-line {
@@ -354,6 +354,7 @@ input[type=radio]:checked + .glow {
   align-items: center;
   display: flex;
   border: 1px solid #C4450A;
+  overflow: scroll;
 }
 
 .jumboTitle {
@@ -499,7 +500,8 @@ input[type=radio]:checked + .glow {
   margin-top: 50px;
 }
 
-#scoreBtn, #playAgainBtn {
+#scoreBtn,
+#playAgainBtn {
   max-width: 50%;
   height: auto;
   margin: 40px auto;
