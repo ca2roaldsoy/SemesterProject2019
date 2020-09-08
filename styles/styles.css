@@ -70,6 +70,11 @@ main {
   color: #ffffff;
   font-family: "Open Sans", "Verdana", sans-serif;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.card::-webkit-scrollbar {
+  display: none;
 }
 .card-title {
   margin-bottom: 20px;
