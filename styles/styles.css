@@ -360,6 +360,11 @@ input[type=radio]:checked + .glow {
   display: flex;
   border: 1px solid #C4450A;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.jumbotron::-webkit-scrollbar {
+  display: none;
 }
 
 .jumboTitle {

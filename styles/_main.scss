@@ -281,6 +281,12 @@ input[type="radio"]:checked + .glow {
   display: flex;
   border: 1px solid $orange;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .jumboTitle {
