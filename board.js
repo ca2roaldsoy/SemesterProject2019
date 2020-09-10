@@ -31,6 +31,8 @@ jumboTron.appendChild(jumboImg);
 
 // styles
 tileContainer.style.maxWidth = "100%";
+tileContainer.style.width = window.innerWidth;
+tileContainer.style.height = window.innerHeight;
 jumboText.style.minWidth = "400px";
 jumboText.style.paddingLeft = "65px";
 button.style.width = "15%";
@@ -132,7 +134,7 @@ function game() {
 
   /***************************    Start the Game  ***************************/
 
-  window.onload = setTimeout(function () {
+  window.onload = setTimeout(function() {
     jumboTitle.innerHTML = "Play Game";
     jumboText.innerHTML =
       "<p>Cersei Lannister is about to take the crown and rule the seven kingdoms!</p><p> We recon you got <strong>8</strong> turns to get the crown before her.</p><p>Be aware as she watches out for everyone. It is up to you now, " +
@@ -147,19 +149,19 @@ function game() {
   }, 1000);
 
   /***************************    Roll the Dice  ***************************/
-  diceRoll.addEventListener("click", function () {
+  diceRoll.addEventListener("click", function() {
     function initDices() {
       counter++;
       sum.innerHTML = "<b>" + counter + "</b>" + "/8";
 
       // initialize game
-      var interval = setInterval(function () {
+      var interval = setInterval(function() {
         diceRoll.style.display = "none";
         nextDice();
       }, 150);
 
       // loop through numbers and display final number
-      setTimeout(function () {
+      setTimeout(function() {
         var max = 6;
         var roll = Math.ceil(Math.random() * 6);
 
@@ -169,10 +171,10 @@ function game() {
         // clear the token from all tiles
         var tiles = document.querySelectorAll(".box");
 
-        tiles.forEach(function (tile) {
+        tiles.forEach(function(tile) {
           var elInTile = tile.childNodes;
 
-          elInTile.forEach(function (element) {
+          elInTile.forEach(function(element) {
             // if token is inside, remove it
             if (element.id === "token") {
               element.remove();
@@ -197,7 +199,7 @@ function game() {
         currentTile.appendChild(token);
 
         /***************************    Move token x spaces  ***************************/
-        setTimeout(function () {
+        setTimeout(function() {
           // Tile 11 - Move back 3 spaces
           if (currentTile.id == "tile11") {
             currentTile = document.getElementById("tile8");
@@ -316,7 +318,7 @@ function game() {
 
         // Defeat
         if (playerScore < tiles.length && counter >= 8) {
-          setTimeout(function () {
+          setTimeout(function() {
             jumboTitle.innerHTML = "Defeat";
             jumboText.innerHTML =
               "<p>This is a sad day. Cersei Lannister has taken the crown,<br> and now rules the 7 kingdoms";
@@ -327,7 +329,7 @@ function game() {
             button.textContent = "Try Again";
             button.style.backgroundColor = "#C20C0C";
             diceCount = 0;
-            button.addEventListener("click", function () {
+            button.addEventListener("click", function() {
               window.location.href = "index.html";
             });
           }, 600);
@@ -370,12 +372,12 @@ function game() {
 game();
 
 /***************************    Close Jumbotrone  ***************************/
-button.addEventListener("click", function () {
+button.addEventListener("click", function() {
   jumbo.style.display = "none";
 });
 
 /***************************    Back to index page  ***************************/
-document.getElementById("backBtn").addEventListener("click", function () {
+document.getElementById("backBtn").addEventListener("click", function() {
   window.location.href = "index.html";
 });
 

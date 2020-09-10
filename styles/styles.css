@@ -272,17 +272,19 @@ input[type=radio]:checked + .glow {
 
 .player1 {
   position: absolute;
-  left: 300px;
+  left: 100px;
   top: 50px;
   color: #ffffff;
+  float: left;
 }
 
 .playerName {
   position: absolute;
-  left: 300px;
+  left: 100px;
   top: 125px;
   font-size: 40px;
   color: #C4450A;
+  float: left;
 }
 
 .playerScore {
@@ -301,14 +303,15 @@ input[type=radio]:checked + .glow {
 
 .goal {
   position: absolute;
-  right: 300px;
+  right: 100px;
   top: 50px;
   color: #ffffff;
+  float: right;
 }
 
 .sum {
   position: absolute;
-  right: 280px;
+  right: 100px;
   top: 115px;
   font-size: 40px;
   color: #C4450A;
@@ -487,10 +490,14 @@ input[type=radio]:checked + .glow {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#winner::-webkit-scrollbar {
+  display: none;
 }
 
 #winnerText {
