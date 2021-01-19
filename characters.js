@@ -49,52 +49,71 @@ playBtn.addEventListener("click", function(){
 /***************************    Get Characters Api  ***************************/
 counter = 0;
 
-function apiReq (ids){
-var api = ("https://anapioficeandfire.com/api/characters/" + ids);
-fetch(api)
+/*
+(148):  // Arya Stark
+(583):  // Jon Snow
+(957):  // Sansa Stark
+(338):  // Eddard Stark
+(529):  // Jamie Lannister
+(1052): // Tyrion Lannister
+(565):  // Joffrey Baratheon
+(901):  // Robert Baratheon
+(1022): // Theon Greyjoy
+(1303): // Daenerys Targaryen
+*/
 
-.then (result => result.json())
-.then ((res) => { 
-    
-    (res)
-    
-    var charInfo = document.getElementById("banner");
+const apiArr = [148, 583, 957, 338, 529, 1052, 565, 901, 1022, 1303];
+
+const myApp = (function() {  
+    const fetchData = async () => {
+
+        let apiUrls = [];
+        for (let i = 0; i < apiArr.length; i++) {
+           apiUrls.push('https://anapioficeandfire.com/api/characters/'+ apiArr[i]);
+        }
+
+        try {
+            Promise.all(apiUrls.map((url) =>
+                fetch(url).then(resp => resp.json())
+            ))
+            .then(data=> {
+                console.log(data)
+
+                data.map(result => {
+                    var charInfo = document.getElementById("banner");
    
-    var label = document.querySelector(".characters__container");
-    var cardBody = document.querySelector(".card-body");
-    var ul = document.createElement("ul");
-    label.appendChild(ul);
-    charInfo.appendChild(label);
+                    var label = document.querySelector(".characters__container");
+                    var cardBody = document.querySelector(".card-body");
+                    var ul = document.createElement("ul");
+                    label.appendChild(ul);
+                    charInfo.appendChild(label);
 
-    switch (ids) {
-
-            case ids:   cardBody.innerHTML += "<h3 class='card-title'>" + res.name + "</h3>";
-                        cardBody.innerHTML += "<p class='card-text'> Title: <br>" + res.titles[0] + "</p>";
+                    cardBody.innerHTML += "<h3 class='card-title'>" + result.name + "</h3>";
+                    cardBody.innerHTML += "<p class='card-text'> Title: <br>" + result.titles[0] + "</p>";
                         
-                        if(res.titles[0] == "") {
-                
-                        cardBody.innerHTML += "<p class='card-text'>Unknown</p>";
-                            
-                        }
+                    if(result.titles[0] == "") {
             
-                        cardBody.innerHTML += "<p class='card-text'>Alias: <br>" + res.aliases[0] + "</p>";
-                        cardBody.innerHTML += "<p class='card-text'> Born: <br>" + res.born + "</p>";
-                break;
-    }
-    
-})
-    
-.catch (error => console.log(error))
-    
-};
+                    cardBody.innerHTML += "<p class='card-text'>Unknown</p>";
+                        
+                    }
+        
+                    cardBody.innerHTML += "<p class='card-text'>Alias: <br>" + result.aliases[0] + "</p>";
+                    cardBody.innerHTML += "<p class='card-text'> Born: <br>" + result.born + "</p>";
+                  })
+              })
 
-apiReq(148);    // Arya Stark
-apiReq(583);    // Jon Snow
-apiReq(957);    // Sansa Stark
-apiReq(338);    // Eddard Stark
-apiReq(529);    // Jamie Lannister
-apiReq(1052);   // Tyrion Lannister
-apiReq(565);    // Joffrey Baratheon
-apiReq(901);    // Robert Baratheon
-apiReq(1022);   // Theon Greyjoy
-apiReq(1303);   // Daenerys Targaryen
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    const init = () => {
+        fetchData();
+    }
+
+    return {
+        init: init
+    }
+})();
+
+myApp.init();
